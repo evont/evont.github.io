@@ -183,8 +183,14 @@ rm -rf android/build && rm -rf ios/build</code></pre>
 </li>
 <li><p>连接手机进行调试时，使用 <code>adb devices</code> 看不到已连接设备<br>解决办法： 理论上是因为使用了小米手机， 进入设置 =》 开发者选项 =》 将<code>启用miui 优化</code> 选项关闭即可，如果不是，请确定手机已正确连上电脑</p>
 </li>
+<li><p>使用class 调用函数时找不到函数<br>解决办法：</p>
+<ul>
+<li>在constructor 中为所有定义的方法绑定 this，如 <code>this.XXX = this.XXX.bind(this)</code>，缺点是每定义一个函数都要去绑定一次，十分麻烦;</li>
+<li>在调用的时候绑定 this， 如 <code>onPress = {this.XXX.bind(this)}</code>，缺点是调用同一个函数也要绑定一次this;</li>
+<li>使用箭头函数，如<code>onPress = {()=&gt; this.XXX()}</code>，这种方法很简洁，也解决了this指向问题，但缺点是()=&gt; 每次都会产生新函数导致不必要的性能开销；</li>
+</ul>
+</li>
 </ol>
-<p>4.</p>
 </li>
 </ul>
 <ul>
@@ -199,10 +205,13 @@ echo |set /p="8933bad161af4178b1185d1a37fbf41ea5269c55" > "%ANDROID_HOME%\licens
 </li>
 <li><p>iOS 部分</p>
 <ol>
-<li>http 请求失败的问题<br>在iOS 9 或以上版本，新增了App Transport Security（简称ATS）特性，强制所有http 协议都使用https 协议进行传输，因此，如果服务器为http 的情况下，则需在info.plist 中找到 <code>App Transport Security Settings</code> 进行如下设置：<ul>
+<li><p>http 请求失败的问题<br>在iOS 9 或以上版本，新增了App Transport Security（简称ATS）特性，强制所有http 协议都使用https 协议进行传输，因此，如果服务器为http 的情况下，则需在info.plist 中找到 <code>App Transport Security Settings</code> 进行如下设置：</p>
+<ul>
 <li>在<code>Exception Domains</code> 中加入服务器域名，注意类型应为 <code>Dictionary</code> ；</li>
 <li>在该字典中添加 <code>NSExceptionAllowInsecureHTTPLoads</code> 字段，类型设置为 Boolean， 值为YES<br><img src="/img/16D702C344730AF12F5AC8093182D750.png" alt="info.plist 设置">;</li>
 </ul>
+</li>
+<li><p><code>Image source size {60, 40} does not match loaded image size {30, 20}</code><br>该图片资源的 <em>@2x.png</em> 不是</p>
 </li>
 </ol>
 </li>
