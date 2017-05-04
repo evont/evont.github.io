@@ -170,7 +170,26 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>在使用Vue.js (vue-cli 创建本地项目开发) 或者React.js （create-react-app 创建本地项目开发）的时候，我们通常会遇到跨域问题<br><img src="/img/50ADA248-088F-417D-A896-D70FE790F8A6.png" alt="跨域请求失败示例">;</p>
+      		<p>在使用Vue.js (vue-cli 创建本地项目开发) 或者React.js （create-react-app 创建本地项目开发）的时候，我们通常会遇到下面这样的跨域问题</p>
+<p><img src="/img/50ADA248-088F-417D-A896-D70FE790F8A6.png" alt="跨域请求失败示例">;</p>
+<p>那么，怎么解决这个问题呢？</p>
+<h3 id="Vue-js-解决方案"><a href="#Vue-js-解决方案" class="headerlink" title="Vue.js 解决方案"></a>Vue.js 解决方案</h3><ol>
+<li>在项目根目录下搜索config 目录，找到index.js 文件<br><img src="/img/3129CE0C-FC05-49C7-A56D-F495FE73452E.png" alt="index.js 文件">;</li>
+<li><p>更改proxyTable 配置<br>ProxyTable 这个参数是一个地址映射表，如图，第一个键值为代理后的路径， target 则为要请求的url，按照如下设置，则可将所有对 <code>http://baobab.kaiyanapp.com/api/v4</code> 的请求代理到 <code>/api</code> 这个 路径上，请求的时候只需要请求类似 <code>/api／tabs/selected</code> 的url，webpack就会自动将请求转发到 <code>http://baobab.kaiyanapp.com/api/v4/tabs/selected</code> 下；如果本身的请求接口存在前缀 <code>/api</code> ，则需在 <code>pathRewrite</code> 中将 <code>&#39;^/api&#39;</code> 转为 <code>&#39;/&#39;</code> 或者 <code>&#39;&#39;</code>；<br>而至于跨域问题，我们可以在这个参数中加上 <code>changeOrigin</code> 参数，这个参数接收一个boolean 值，将其设置为true，那么本地则会代理请求，这样就解决了跨域问题；<br><img src="/img/92A8B71F-306A-4199-A150-5FE64371F0B4.png" alt="更改Proxy">;</p>
+<p>文档参考 <a href="https://vuejs-templates.github.io/webpack/proxy.html" title="Vuejs webpack配置文档" target="_blank" rel="external">Vuejs webpack Proxy配置文档</a><br>Vue 使用的http-proxy-middleware 插件地址为 ： <a href="https://github.com/chimurai/http-proxy-middleware" target="_blank" rel="external">https://github.com/chimurai/http-proxy-middleware</a>；</p>
+</li>
+</ol>
+<h3 id="React-js-解决方案"><a href="#React-js-解决方案" class="headerlink" title="React.js 解决方案"></a>React.js 解决方案</h3><ol>
+<li><p>由于create-react-app 的目标是简介的开发者体验，因此使用create-react-app 创建的项目中是看不到webpack 等的配置项的，因此我们需要先执行eject</p>
+<pre><code>npm run eject</code></pre>
+或者
+<pre><code>yarn run eject</code></pre>
+
+<p>这个命令将所有的配置文件及package.json 依赖库解压暴露到应用所在路径，一旦执行则不可回退（真不知道这样的设计有什么意义。。。。）;</p>
+</li>
+<li>在项目根目录下搜索scripts 目录，找到start.js 文件<br><img src="/img/9F534441-789F-443D-A8A4-0AB0E42B2FE2.png" alt="start.js 文件">;</li>
+<li>加入如下代码<br><pre><code>proxy:{<br> “/api” : {<br>   target: “<a href="http://xxx.com/" target="_blank" rel="external">http://xxx.com/</a>“,<br>   secure: false,<br>   changeOrigin : true<br> }<br>}</code></pre><br>这一配置与Vue.js 的ProxyTable 配置很类似，同样是将请求代理到target 所指向的url 上进行请求转发</li>
+</ol>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
