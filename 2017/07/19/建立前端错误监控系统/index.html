@@ -170,7 +170,17 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<p>平日开发的时候，代码常有在开发时正常，部署到生产环境中后，因为代码的宿主环境不同而导致的兼容问题或实际细节无法复现等原因，我们常常没法轻易的查看到代码的错误原因。为了确保代码的稳定性和准确性，建立前端错误监控系统成为了一个十分有用的手段。</p>
+<h3 id="收集日志的方法"><a href="#收集日志的方法" class="headerlink" title="收集日志的方法"></a>收集日志的方法</h3><ol>
+<li><p>try … catch 捕获</p>
+<p>在程序的入口进行try…catch 包裹，将代码同步发生的错误进行捕获，这种方法能够避免程序一跑起来就挂掉，但是如果想要全局捕获错误就显得比较无力</p>
+</li>
+<li><p>window.onerror</p>
+</li>
+</ol>
+<p>window.onerror 能够有效地在全局中收集到代码运行中发生的错误，在其函数中返回 <code>return true</code>，错误便不会暴露到控制台中。用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @param &#123;String&#125;  errorMessage   错误信息</div><div class="line"> * @param &#123;String&#125;  scriptURI      出错的文件</div><div class="line"> * @param &#123;Long&#125;    lineNumber     出错代码的行号</div><div class="line"> * @param &#123;Long&#125;    columnNumber   出错代码的列号</div><div class="line"> * @param &#123;Object&#125;  errorObj       错误的详细信息，Anything</div><div class="line"> */</div><div class="line">window.onerror = function(errorMessage, scriptURI, lineNumber,columnNumber,errorObj) &#123; </div><div class="line">    // code..</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="野生收集错误方法"><a href="#野生收集错误方法" class="headerlink" title="野生收集错误方法"></a>野生收集错误方法</h3>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
