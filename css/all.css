@@ -3450,6 +3450,12 @@ footer .footer_bottom {
 
 .post-donate {
     text-align: center;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+.donate_bar {
+    display: inline-block;
+    margin: 20px
 }
 .entry .gist {
   background: #eee;
