@@ -236,7 +236,31 @@ echo |set /p="8933bad161af4178b1185d1a37fbf41ea5269c55" > "%ANDROID_HOME%\licens
 </div>
     </div>
 </section>
+<! -- 添加捐赠图标 -->
+    <div class ="post-donate">
+      <div id="donate_board" class="center">
+        <span class="donate_txt">
+           Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！         
+        </span>
+        <br>
+      </div>  
+  
+    <!-- 支付宝打赏图案 -->
+      <div id="donate_guide" class="donate_bar center">
+          <a href="/img/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0">
+          <img src="/img/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+          </a> 
+      </div>
 
+    <!-- 微信打赏图案 -->
+      <div id="donate_guide" class="donate_bar center">
+          <a href="/img/wepay.png" title="微信打赏" class="fancybox" rel="article0"  >
+          <img src="/img/wepay.png" title="微信打赏" height="164px" width="164px">
+          </a> 
+      </div>
+
+    </div>
+<! -- 添加捐赠图标 -->
 
       
 <!-- ============================ Footer =========================== -->
@@ -288,23 +312,6 @@ echo |set /p="8933bad161af4178b1185d1a37fbf41ea5269c55" > "%ANDROID_HOME%\licens
 <script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
 <script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
-
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
-  }
-
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
 
 <!-- Initiate flexslider plugin -->
 <script type="text/javascript">

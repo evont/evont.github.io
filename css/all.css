@@ -3448,7 +3448,9 @@ footer .footer_bottom {
 @charset "utf-8";
 /* CSS Document */
 
-
+.post-donate {
+    text-align: center;
+}
 .entry .gist {
   background: #eee;
   border: 1px solid color-border;
