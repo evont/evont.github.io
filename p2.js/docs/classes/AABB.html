@@ -137,7 +137,7 @@
 
 
 <div class="box intro">
-    <p>Axis aligned bounding box class.</p>
+    <p>轴对称包围盒</p>
 
 </div>
 
@@ -182,7 +182,7 @@
                         <li class="param">
                                 <code class="param-name optional">[options]</code>
                                 <span class="type">Object</span>
-                                <span class="flag optional" title="This parameter is optional.">optional</span>
+                                <span class="flag optional" title="该参数是可选的">可选</span>
         
         
                             <div class="param-description">
@@ -191,9 +191,9 @@
         
                                 <ul class="params-list">
                                     <li class="param">
-                                            <code class="param-name optional">[upperBound]</code>
+                                            <code class="param-name optional">[upperBound] 上边界坐标</code>
                                             <span class="type">Array</span>
-                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
                                             
@@ -201,9 +201,9 @@
         
                                     </li>
                                     <li class="param">
-                                            <code class="param-name optional">[lowerBound]</code>
+                                            <code class="param-name optional">[lowerBound] 下边界坐标</code>
                                             <span class="type">Array</span>
-                                            <span class="flag optional" title="This parameter is optional.">optional</span>
+                                            <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
                                             
@@ -222,18 +222,18 @@
 
 <div id="classdocs" class="tabview">
     <ul class="api-class-tabs">
-        <li class="api-class-tab index"><a href="#index">Index</a></li>
+        <li class="api-class-tab index"><a href="#index">索引</a></li>
 
-            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
-            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+            <li class="api-class-tab methods"><a href="#methods">方法</a></li>
+            <li class="api-class-tab properties"><a href="#properties">属性</a></li>
     </ul>
 
     <div>
         <div id="index" class="api-class-tabpanel index">
-            <h2 class="off-left">Item Index</h2>
+            <h2 class="off-left">项目索引</h2>
 
                 <div class="index-section methods">
-                    <h3>Methods</h3>
+                    <h3>方法</h3>
 
                     <ul class="index-list methods">
                             <li class="index-item method">
@@ -264,7 +264,7 @@
                 </div>
 
                 <div class="index-section properties">
-                    <h3>Properties</h3>
+                    <h3>属性</h3>
 
                     <ul class="index-list properties">
                             <li class="index-item property">
@@ -316,7 +316,7 @@
     </div>
 
     <div class="description">
-        
+        检测指定的点是否在包围盒中
     </div>
 
         <div class="params">
@@ -329,7 +329,7 @@
 
 
                     <div class="param-description">
-                         
+                        包含指定的坐标点的数组 [ x, y ]
                     </div>
 
                 </li>
@@ -375,7 +375,7 @@
     </div>
 
     <div class="description">
-        <p>Copy bounds from an AABB to this AABB</p>
+        <p>将指定的AABB 对象复制到当前对象中</p>
 
     </div>
 
@@ -389,7 +389,7 @@
 
 
                     <div class="param-description">
-                         
+                        一个AABB 类型对象
                     </div>
 
                 </li>
@@ -428,7 +428,7 @@
     </div>
 
     <div class="description">
-        <p>Extend this AABB so that it covers the given AABB too.</p>
+        <p>继承指定的AABB 对象，使得当前对象覆盖对应的AABB 对象</p>
 
     </div>
 
@@ -442,7 +442,7 @@
 
 
                     <div class="param-description">
-                         
+                        一个AABB 类型对象
                     </div>
 
                 </li>
@@ -484,7 +484,7 @@
     </div>
 
     <div class="description">
-        <p>Returns true if the given AABB overlaps this AABB.</p>
+        <p>检测指定的AABB 对象是否覆盖当前AABB 对象</p>
 
     </div>
 
@@ -498,7 +498,7 @@
 
 
                     <div class="param-description">
-                         
+                        一个AABB 类型对象
                     </div>
 
                 </li>
@@ -547,7 +547,7 @@
     </div>
 
     <div class="description">
-        <p>Check if the AABB is hit by a ray.</p>
+        <p>检测当前AABB 对象是否被指定的Ray 对象击中</p>
 
     </div>
 
@@ -561,7 +561,7 @@
 
 
                     <div class="param-description">
-                         
+                        一个Ray 对象
                     </div>
 
                 </li>
@@ -573,7 +573,7 @@
 
             <div class="returns-description">
                         <span class="type">Number</span>:
-                    <p>-1 if no hit, a number between 0 and 1 if hit.</p>
+                    <p>如果没有击中则返回 -1，如果击中则返回 0 - 1 之间的一个数；</p>
 
             </div>
         </div>
@@ -618,7 +618,7 @@
     </div>
 
     <div class="description">
-        <p>Set the AABB bounds from a set of points, transformed by the given position and angle.</p>
+        <p>在指定位置创建AABB对象并进行位移及旋转，同时拓宽包围盒边距。</p>
 
     </div>
 
@@ -632,7 +632,7 @@
 
 
                     <div class="param-description">
-                        <p>An array of vec2&#39;s.</p>
+                        <p>要设置AABB 对象的新坐标点数组</p>
 
                     </div>
 
@@ -643,7 +643,7 @@
 
 
                     <div class="param-description">
-                         
+                        位移位置
                     </div>
 
                 </li>
@@ -653,7 +653,7 @@
 
 
                     <div class="param-description">
-                         
+                        旋转的角度
                     </div>
 
                 </li>
@@ -663,7 +663,7 @@
 
 
                     <div class="param-description">
-                        <p>Some margin to be added to the AABB.</p>
+                        <p>加给包围盒的边距</p>
 
                     </div>
 
