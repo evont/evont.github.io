@@ -140,13 +140,12 @@
 
 
 <div class="box intro">
-    <p>A rigid body. Has got a center of mass, position, velocity and a number of
-shapes that are used for collisions.</p>
+    <p>刚体，具有质量、位置、速度以及一些用于碰撞的形状的物理对象</p>
 
 </div>
 
     <div class="constructor">
-        <h2>Constructor</h2>
+        <h2>构造器</h2>
         <div id="method_Body" class="method item">
             <h3 class="name"><code>Body</code></h3>
         
@@ -330,7 +329,7 @@ shapes that are used for collisions.</p>
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>A number &gt;= 0. If zero, the .type will be set to Body.STATIC.</p>
+                                            <p>一个大于等于 0 的数字，如果为0， 则type 将被设为Body.STATIC</p>
         
                                         </div>
         
@@ -388,11 +387,11 @@ shapes that are used for collisions.</p>
 
 <div id="classdocs" class="tabview">
     <ul class="api-class-tabs">
-        <li class="api-class-tab index"><a href="#index">Index</a></li>
+        <li class="api-class-tab index"><a href="#index">索引</a></li>
 
-            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
-            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
-            <li class="api-class-tab events"><a href="#events">Events</a></li>
+            <li class="api-class-tab methods"><a href="#methods">方法</a></li>
+            <li class="api-class-tab properties"><a href="#properties">属性</a></li>
+            <li class="api-class-tab events"><a href="#events">事件</a></li>
     </ul>
 
     <div>
@@ -782,9 +781,7 @@ shapes that are used for collisions.</p>
     </div>
 
     <div class="description">
-        <p>Add a shape to the body. You can pass a local transform when adding a shape,
-so that the shape gets an offset and angle relative to the body center of mass.
-Will automatically update the mass properties and bounding radius.</p>
+        <p>将一个形状依附到这个刚体上，可以在添加形状时传入一个局部变换值，使得形状拥有相对刚体重心的位置和角度。这将自动更新刚体的属性和包围半径</p>
 
     </div>
 
@@ -798,7 +795,7 @@ Will automatically update the mass properties and bounding radius.</p>
 
 
                     <div class="param-description">
-                         
+                        将依附到刚体上的形状
                     </div>
 
                 </li>
@@ -809,7 +806,7 @@ Will automatically update the mass properties and bounding radius.</p>
 
 
                     <div class="param-description">
-                        <p>Local body offset of the shape.</p>
+                        <p>形状的局部偏移</p>
 
                     </div>
 
@@ -821,7 +818,7 @@ Will automatically update the mass properties and bounding radius.</p>
 
 
                     <div class="param-description">
-                        <p>Local body angle.</p>
+                        <p>形状的局部角度</p>
 
                     </div>
 
@@ -838,13 +835,13 @@ Will automatically update the mass properties and bounding radius.</p>
                 <pre class="code prettyprint"><code>var body = new Body(),
     shape = new Circle({ radius: 1 });
 
-// Add the shape to the body, positioned in the center
+// 将形状置于刚体中间
 body.addShape(shape);
 
-// Add another shape to the body, positioned 1 unit length from the body center of mass along the local x-axis.
+// 添加另一个形状, 将其放置于距离刚体重心X轴方向1单位的位置
 body.addShape(shape,[1,0]);
 
-// Add another shape to the body, positioned 1 unit length from the body center of mass along the local y-axis, and rotated 90 degrees CCW.
+// 添加另一个形状, 将其放置于距离刚体重心Y轴方向1单位的位置，同时将其旋转90度(逆时针方向)
 body.addShape(shape,[0,1],Math.PI/2);
 </code></pre>
             </div>
@@ -873,7 +870,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Moves the shape offsets so their center of mass becomes the body center of mass.</p>
+        <p>调整形状的偏移量，使得其中心变成刚体的重心。</p>
 
     </div>
 
@@ -910,7 +907,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Apply damping, see <a href="http://code.google.com/p/bullet/issues/detail?id=74">this</a> for details.</p>
+        <p>施加阻尼。参见 <a href="http://code.google.com/p/bullet/issues/detail?id=74">this</a></p>
 
     </div>
 
@@ -924,7 +921,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>Current time step</p>
+                        <p>当前时间戳</p>
 
                     </div>
 
@@ -967,7 +964,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Apply force to a point relative to the center of mass of the body. This could for example be a point on the RigidBody surface. Applying force this way will add to Body.force and Body.angularForce. If relativePoint is zero, the force will be applied directly on the center of mass, and the torque produced will be zero.</p>
+        <p>在相对刚体重心的一个点施加作用力， 这个点可以是刚体表面上的任意一点， 这种情况下施加作用力将影响刚体的force 作用力和angularForce 角速度，如果这一点为0， 这一作用力将直接施加在刚体重心，产生的扭矩将为0</p>
 
     </div>
 
@@ -981,7 +978,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The force to add.</p>
+                        <p>施加在刚体上的力</p>
 
                     </div>
 
@@ -993,7 +990,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>A world point to apply the force on.</p>
+                        <p>相对重心的施力点</p>
 
                     </div>
 
@@ -1036,7 +1033,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Apply force to a body-local point.</p>
+        <p>对物体所在位置施加一个作用力</p>
 
     </div>
 
@@ -1050,7 +1047,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The force vector to add, oriented in local body space.</p>
+                        <p>施加在刚体所在物理空间的向量力</p>
 
                     </div>
 
@@ -1062,7 +1059,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>A point relative to the body in world space. If not given, it is set to zero and all of the impulse will be excerted on the center of mass.</p>
+                        <p>刚体所在的物理世界中的一个关联点，如果不给出，它将被设置为零，所有的冲量将施加到刚体重心</p>
 
                     </div>
 
@@ -1105,7 +1102,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Apply impulse to a point relative to the body. This could for example be a point on the Body surface. An impulse is a force added to a body during a short period of time (impulse = force * time). Impulses will be added to Body.velocity and Body.angularVelocity.</p>
+        <p>在相对刚体的某一点上施加一个冲量(冲量是一个短时间内加到刚体上的力，冲量= 力 * 时间)，这个点可以是刚体表面上的任意一点。冲量将影响刚体的velocity 速度和angularVelocity 角速度</p>
 
     </div>
 
@@ -1119,7 +1116,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The impulse vector to add, oriented in world space.</p>
+                        <p>施加在刚体所在物理空间的冲量</p>
 
                     </div>
 
@@ -1131,7 +1128,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>A point relative to the body in world space. If not given, it is set to zero and all of the impulse will be excerted on the center of mass.</p>
+                        <p>刚体所在的物理世界中的一个关联点，如果不给出，它将被设置为零，所有的冲量将施加到刚体重心</p>
 
                     </div>
 
@@ -1174,7 +1171,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Apply impulse to a point relative to the body. This could for example be a point on the Body surface. An impulse is a force added to a body during a short period of time (impulse = force * time). Impulses will be added to Body.velocity and Body.angularVelocity.</p>
+        <p>在相对刚体的某一点上施加一个冲量(冲量是一个短时间内加到刚体上的力，冲量= 力 * 时间)，这个点可以是刚体表面上的任意一点。冲量将影响刚体的velocity 速度和angularVelocity 角速度</p>
 
     </div>
 
@@ -1188,7 +1185,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The impulse vector to add, oriented in world space.</p>
+                        <p>施加在刚体所在物理空间的冲量</p>
 
                     </div>
 
@@ -1200,7 +1197,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>A point relative to the body in world space. If not given, it is set to zero and all of the impulse will be excerted on the center of mass.</p>
+                        <p>刚体所在的物理世界中的一个关联点，如果不给出，它将被设置为零，所有的冲量将施加到刚体重心</p>
 
                     </div>
 
@@ -1243,7 +1240,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Emit an event.</p>
+        <p>触发一个事件，并返回自身，用于链式调用</p>
 
     </div>
 
@@ -1280,7 +1277,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -1322,7 +1319,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Reads a polygon shape path, and assembles convex shapes from that and puts them at proper offset points.</p>
+        <p>读取一个多边形路路径，转化为凸型并将其放置在适当的偏移点上。</p>
 
     </div>
 
@@ -1336,7 +1333,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>An array of 2d vectors, e.g. [[0,0],[0,1],...] that resembles a concave or convex polygon. The shape must be simple and without holes.</p>
+                        <p>包含多个2D向量的数组的凹或凸多边形，这个形状必须是普通的且不包含留空（内部）的</p>
 
                     </div>
 
@@ -1358,7 +1355,7 @@ body.addShape(shape,[0,1],Math.PI/2);
                                     <span class="flag optional" title="该参数是可选的">可选</span>
 
                                 <div class="param-description">
-                                    <p>Set to true if you need optimal decomposition. Warning: very slow for polygons with more than 10 vertices.</p>
+                                    <p>是否开启最优分解，当顶点大于10个时性能将下降</p>
 
                                 </div>
 
@@ -1369,7 +1366,7 @@ body.addShape(shape,[0,1],Math.PI/2);
                                     <span class="flag optional" title="该参数是可选的">可选</span>
 
                                 <div class="param-description">
-                                    <p>Set to true if you already know that the path is not intersecting itself.</p>
+                                    <p>如果你已经知道路径不会与自身相交，将其设置为true则跳过检查</p>
 
                                 </div>
 
@@ -1380,7 +1377,7 @@ body.addShape(shape,[0,1],Math.PI/2);
                                     <span class="flag optional" title="该参数是可选的">可选</span>
 
                                 <div class="param-description">
-                                    <p>Set to a number (angle threshold value) to remove collinear points, or false to keep all points.</p>
+                                    <p>设置为一个数字（角度阈值）去除共线点，或false保持所有点</p>
 
                                 </div>
 
@@ -1395,7 +1392,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
             <div class="returns-description">
                         <span class="type">Boolean</span>:
-                    <p>True on success, else false.</p>
+                    <p>如果成功则返回true，否则为false</p>
 
             </div>
         </div>
@@ -1428,7 +1425,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Get the AABB from the body. The AABB is updated if necessary.</p>
+        <p>返回从刚体中的AABB实例，如果必要这个AABB 将会被更新</p>
 
     </div>
 
@@ -1438,7 +1435,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
             <div class="returns-description">
                         <span class="type"><a href="AABB.html" class="crosslink">AABB</a></span>:
-                    <p>The AABB instance (this.aabb)</p>
+                    <p>AABB 实例(this.aabb)</p>
 
             </div>
         </div>
@@ -1471,7 +1468,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Get the total area of all shapes in the body</p>
+        <p>返回刚体所包含的形状总面积</p>
 
     </div>
 
@@ -1521,7 +1518,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Get velocity of a point in the body.</p>
+        <p>返回刚体上一个点的速度</p>
 
     </div>
 
@@ -1535,7 +1532,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>A vector to store the result in</p>
+                        <p>放置结果的向量数组</p>
 
                     </div>
 
@@ -1546,7 +1543,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>A world oriented vector, indicating the position of the point to get the velocity from</p>
+                        <p>面向世界的向量，需要得到速度信息的点的位置</p>
 
                     </div>
 
@@ -1559,7 +1556,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
             <div class="returns-description">
                         <span class="type">Array</span>:
-                    <p>The result vector</p>
+                    <p>刚体上一个点的速度</p>
 
             </div>
         </div>
@@ -1601,7 +1598,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Check if an event listener is added</p>
+        <p>检查是否添加了该事件监听器</p>
 
     </div>
 
@@ -1671,7 +1668,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Move the body forward in time given its current velocity.</p>
+        <p>根据时间以及当前的速度移动刚体。</p>
 
     </div>
 
@@ -1685,7 +1682,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                         
+                        时间增量
                     </div>
 
                 </li>
@@ -1730,7 +1727,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Remove an event listener</p>
+        <p>移除指定的事件监听</p>
 
     </div>
 
@@ -1766,7 +1763,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -1808,7 +1805,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Add an event listener</p>
+        <p>添加一个事件监听</p>
 
     </div>
 
@@ -1844,7 +1841,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -1883,7 +1880,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Check if the body is overlapping another body. Note that this method only works if the body was added to a World and if at least one step was taken.</p>
+        <p>检查该刚体是否覆盖于其他刚体，需要注意的是，这个方法仅在刚体已添加到物理世界中且至少已经有一次步进的情况下可用</p>
 
     </div>
 
@@ -1946,7 +1943,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Remove a shape</p>
+        <p>删除指定的形状</p>
 
     </div>
 
@@ -1972,7 +1969,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
             <div class="returns-description">
                         <span class="type">Boolean</span>:
-                    <p>True if the shape was found and removed, else false.</p>
+                    <p>如果找到并移除了指定的形状则返回True， 否则为false</p>
 
             </div>
         </div>
@@ -2008,7 +2005,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Set the total density of the body</p>
+        <p>设定刚体的总密度</p>
 
     </div>
 
@@ -2055,7 +2052,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Sets the force on the body to zero.</p>
+        <p>将刚体的作用力归零</p>
 
     </div>
 
@@ -2086,7 +2083,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Force body sleep</p>
+        <p>强制让刚体睡眠</p>
 
     </div>
 
@@ -2129,7 +2126,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Called every timestep to update internal sleep timer and change sleep state if needed.</p>
+        <p>在每次时间步进时调用，更新内部睡眠定时器并在必要时更改睡眠状态</p>
 
     </div>
 
@@ -2143,7 +2140,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The world time in seconds</p>
+                        <p>以秒为单位的世界时间</p>
 
                     </div>
 
@@ -2206,7 +2203,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Transform a world point to local body frame.</p>
+        <p>将世界中的一个点移动到刚体的范围中。（Transform a world point to local body frame.）</p>
 
     </div>
 
@@ -2220,7 +2217,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The vector to store the result in</p>
+                        <p>存放结果的向量数组</p>
 
                     </div>
 
@@ -2231,7 +2228,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The input world point</p>
+                        <p>世界中的一个点(The input world point)</p>
 
                     </div>
 
@@ -2274,7 +2271,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Transform a local point to world frame.</p>
+        <p>将一个本地的点移动到世界范围内(Transform a local point to world frame.)</p>
 
     </div>
 
@@ -2288,7 +2285,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The vector to store the result in</p>
+                        <p>存放结果的向量数组</p>
 
                     </div>
 
@@ -2299,7 +2296,7 @@ body.addShape(shape,[0,1],Math.PI/2);
 
 
                     <div class="param-description">
-                        <p>The input local point</p>
+                        <p>范围中的一个点(The input local point)</p>
 
                     </div>
 
@@ -2333,7 +2330,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Updates the AABB of the Body, and set .aabbNeedsUpdate = false.</p>
+        <p>更新刚体的包围盒模型, 并且设置 .aabbNeedsUpdate = false.</p>
 
     </div>
 
@@ -2364,7 +2361,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Update the bounding radius of the body (this.boundingRadius). Should be done if any of the shape dimensions or positions are changed.</p>
+        <p>更新刚体的边缘半径(this.boundingRadius). 如果形状尺寸或位置改变了就完成了</p>
 
     </div>
 
@@ -2395,8 +2392,7 @@ body.addShape(shape,[0,1],Math.PI/2);
     </div>
 
     <div class="description">
-        <p>Updates .inertia, .invMass, .invInertia for this Body. Should be called when
-changing the structure or mass of the Body.</p>
+        <p>更新这个刚体的 .inertia, .invMass, .invInertia 属性， 当改变刚体的结构或质量时需要调用这个方法</p>
 
     </div>
 
@@ -2476,7 +2472,7 @@ body.updateMassProperties();
     </div>
 
     <div class="description">
-        <p>Transform a world point to local body frame.</p>
+        <p>将世界中的一个点移动到刚体的范围中。（Transform a world point to local body frame.）</p>
 
     </div>
 
@@ -2490,7 +2486,7 @@ body.updateMassProperties();
 
 
                     <div class="param-description">
-                        <p>The vector to store the result in</p>
+                        <p>存放结果的向量数组</p>
 
                     </div>
 
@@ -2501,7 +2497,7 @@ body.updateMassProperties();
 
 
                     <div class="param-description">
-                        <p>The input world vector</p>
+                        <p>世界中的一个向量(The input local point)</p>
 
                     </div>
 
@@ -2544,7 +2540,7 @@ body.updateMassProperties();
     </div>
 
     <div class="description">
-        <p>Transform a local point to world frame.</p>
+        <p>将一个本地的点移动到世界范围内(Transform a local point to world frame.)</p>
 
     </div>
 
@@ -2558,7 +2554,7 @@ body.updateMassProperties();
 
 
                     <div class="param-description">
-                        <p>The vector to store the result in</p>
+                        <p>存放结果的向量数组</p>
 
                     </div>
 
@@ -2569,7 +2565,7 @@ body.updateMassProperties();
 
 
                     <div class="param-description">
-                        <p>The input local vector</p>
+                        <p>范围中的一个向量(The input local point)</p>
 
                     </div>
 
@@ -2603,9 +2599,7 @@ body.updateMassProperties();
     </div>
 
     <div class="description">
-        <p>Wake the body up. Normally you should not need this, as the body is automatically awoken at events such as collisions.
-Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a> and emits the wakeUp event if the body wasn&#39;t awake before.</p>
-
+        <p>唤醒当前刚体. 正常情况下你不需要用到它，因为当刚体触发类似于碰撞等的事件时会自动苏醒。 这一方法将设置睡眠状态为<a href="#property_AWAKE" class="crosslink">Body.AWAKE</a> 同时触发wakeUp 事件，即使刚体在此之前没有苏醒
     </div>
 
 
@@ -2635,7 +2629,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Bounding box of this body.</p>
+                            <p>刚体的包围盒</p>
                     
                         </div>
                     
@@ -2660,7 +2654,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Indicates if the AABB needs update. Update it with <a href="#method_updateAABB" class="crosslink">.updateAABB()</a>.</p>
+                            <p>标志包围盒是否需要更新，使用<a href="#method_updateAABB" class="crosslink">.updateAABB()</a>进行更新</p>
                     
                         </div>
                     
@@ -2669,7 +2663,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                                 <h4>Example:</h4>
                     
                                 <div class="example-content">
-                                    <pre class="code prettyprint"><code>// Force update the AABB
+                                    <pre class="code prettyprint"><code>// 强制更新包围盒
                     body.aabbNeedsUpdate = true;
                     body.updateAABB();
                     console.log(body.aabbNeedsUpdate); // false
@@ -2696,7 +2690,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>If true, the body will automatically fall to sleep. Note that you need to enable sleeping in the <a href="World.html" class="crosslink">World</a> before anything will happen.</p>
+                            <p>如果设置为真，刚体将会自动进入睡眠状态。需要注意的是，你需要在所有事件发生前在<a href="World.html" class="crosslink">World</a> 中启用睡眠。</p>
                     
                         </div>
                     
@@ -2722,7 +2716,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The angle of the body, in radians.</p>
+                            <p>角度</p>
                     
                         </div>
                     
@@ -2731,8 +2725,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                                 <h4>Example:</h4>
                     
                                 <div class="example-content">
-                                    <pre class="code prettyprint"><code>// The angle property is not normalized to the interval 0 to 2*pi, it can be any value.
-                    // If you need a value between 0 and 2*pi, use the following function to normalize it.
+                                    <pre class="code prettyprint"><code>// 这一属性没有限定在标准的0 - 2π 之间，可以设置为任意数字，如果你需要设置它为这一区间的数字，可以用下列函数进行换算；
                     function normalizeAngle(angle){
                         angle = angle % (2*Math.PI);
                         if(angle &lt; 0){
@@ -2763,7 +2756,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The angular force acting on the body. Should be a value between 0 and 1.</p>
+                            <p>角度阻尼，0 - 1之间的数字</p>
                     
                         </div>
                     
@@ -2789,7 +2782,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The angular force acting on the body. See <a href="#property_force" class="crosslink">force</a>.</p>
+                            <p>作用于刚体的角力，参考 <a href="#property_force" class="crosslink">force</a>.</p>
                     
                         </div>
                     
@@ -2814,7 +2807,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The angular velocity of the body, in radians per second.</p>
+                            <p>角速度，每秒转动设定的弧度</p>
                     
                         </div>
                     
@@ -2864,7 +2857,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Bounding circle radius.</p>
+                            <p>边界圆半径</p>
                     
                         </div>
                     
@@ -2889,7 +2882,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The number of iterations that should be used when searching for the time of impact during CCD. A larger number will assure that there&#39;s a small penetration on CCD collision, but a small number will give more performance.</p>
+                            <p>在连续碰撞检测时遍历碰撞所使用的迭代次数，次数越多将使得连续碰撞检测碰撞的误差变小，但次数越少将提高性能。</p>
                     
                         </div>
                     
@@ -2915,7 +2908,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>If the body speed exceeds this threshold, CCD (continuous collision detection) will be enabled. Set it to a negative number to disable CCD completely for this body.</p>
+                            <p>如果刚体的速度超过此阈值，连续碰撞检测将被启用。将该值设置为一个负数将完全禁用该刚体的连续碰撞检测；</p>
                     
                         </div>
                     
@@ -2941,7 +2934,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Whether to produce contact forces when in contact with other bodies. Note that contacts will be generated, but they will be disabled. That means that this body will move through other bodies, but it will still trigger contact events, etc.</p>
+                            <p>当与其他刚体碰撞时是否产生碰撞作用力。需要注意的是，碰撞仍会产生，但会被禁用。即：该刚体会穿过其他刚体，但仍然会触发碰撞等事件。</p>
                     
                         </div>
                     
@@ -2966,7 +2959,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The linear damping acting on the body in the velocity direction. Should be a value between 0 and 1.</p>
+                            <p>在速度的方向上作用于刚体的线性阻尼，取值在0 - 1之间；</p>
                     
                         </div>
                     
@@ -3018,7 +3011,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Set to true if you want to fix the rotation of the body.</p>
+                            <p>若为真，则将固定刚体的旋转</p>
                     
                         </div>
                     
@@ -3043,7 +3036,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Set to true if you want to fix the body movement along the X axis. The body will still be able to move along Y.</p>
+                            <p>若为真，则将固定刚体在X轴上的移动，此时刚体依然可以沿着Y轴上移动。</p>
                     
                         </div>
                     
@@ -3068,7 +3061,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Set to true if you want to fix the body movement along the Y axis. The body will still be able to move along X.</p>
+                            <p>若为真，则将固定刚体在Y轴上的移动，此时刚体依然可以沿着X轴上移动。</p>
                     
                         </div>
                     
@@ -3093,7 +3086,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The force acting on the body. Since the body force (and <a href="#property_angularForce" class="crosslink">angularForce</a>) will be zeroed after each step, so you need to set the force before each step.</p>
+                            <p>作用于刚体的外力。 因为刚体的作用力 (and <a href="#property_angularForce" class="crosslink">角向力</a>) 在每一次步进后会变成0， 所以你需要在每一次步进前设置作用力</p>
                     
                         </div>
                     
@@ -3135,7 +3128,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Gravity scaling factor. If you want the body to ignore gravity, set this to zero. If you want to reverse gravity, set it to -1.</p>
+                            <p>重力比例因子，如果希望刚体忽略重力影响，将其设置为0即可，如果希望刚体反重力，将其设置为-1；</p>
                     
                         </div>
                     
@@ -3161,7 +3154,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The body identifyer</p>
+                            <p>刚体的唯一标志</p>
                     
                         </div>
                     
@@ -3186,7 +3179,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>How long the body has been sleeping.</p>
+                            <p>刚体持续睡眠的时间</p>
                     
                         </div>
                     
@@ -3211,7 +3204,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The inertia of the body around the Z axis.</p>
+                            <p>刚体围绕Z轴上的惯性</p>
                     
                         </div>
                     
@@ -3236,7 +3229,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The interpolated angle of the body. Use this for rendering.</p>
+                            <p>刚体的插入角度，用于渲染</p>
                     
                         </div>
                     
@@ -3261,7 +3254,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The interpolated position of the body. Use this for rendering.</p>
+                            <p>刚体的插入位置，用于渲染</p>
                     
                         </div>
                     
@@ -3286,7 +3279,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The inverse inertia of the body.</p>
+                            <p>反向惯性</p>
                     
                         </div>
                     
@@ -3311,7 +3304,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The inverse mass of the body.</p>
+                            <p>反向重力</p>
                     
                         </div>
                     
@@ -3362,7 +3355,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The mass of the body.</p>
+                            <p>刚体的质量</p>
                     
                         </div>
                     
@@ -3412,7 +3405,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The position of the body</p>
+                            <p>刚体的位置</p>
                     
                         </div>
                     
@@ -3437,7 +3430,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The previous angle of the body.</p>
+                            <p>刚体的前一角度</p>
                     
                         </div>
                     
@@ -3462,7 +3455,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The previous position of the body.</p>
+                            <p>刚体的前一位置</p>
                     
                         </div>
                     
@@ -3487,7 +3480,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The shapes of the body.</p>
+                            <p>刚体中的形状，可以多个</p>
                     
                         </div>
                     
@@ -3537,7 +3530,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>If the speed (the norm of the velocity) is smaller than this value, the body is considered sleepy.</p>
+                            <p>如果刚体当前的速度（数量速度speed， 非velocity矢量速度）小于这一数值，刚体将被视为需进入惺忪状态</p>
                     
                         </div>
                     
@@ -3563,8 +3556,8 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>One of <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a>, <a href="#property_SLEEPY" class="crosslink">Body.SLEEPY</a> and <a href="#property_SLEEPING" class="crosslink">Body.SLEEPING</a>.</p>
-                    <p>The body is initially Body.AWAKE. If its velocity norm is below .sleepSpeedLimit, the sleepState will become Body.SLEEPY. If the body continues to be Body.SLEEPY for .sleepTimeLimit seconds, it will fall asleep (Body.SLEEPY).</p>
+                            <p><a href="#property_AWAKE" class="crosslink">Body.AWAKE</a>, <a href="#property_SLEEPY" class="crosslink">Body.SLEEPY</a> 和 <a href="#property_SLEEPING" class="crosslink">Body.SLEEPING</a>之一</p>
+                    <p>刚体初始的睡眠状态为 Body.AWAKE. 如果其当前速度低于 .sleepSpeedLimit, 刚体的睡眠状态将变为 Body.SLEEPY. 如果刚体保持 Body.SLEEPY .sleepTimeLimit 秒将进入休眠模式 (Body.SLEEPY)</p>
                     
                         </div>
                     
@@ -3590,7 +3583,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>If the body has been sleepy for this sleepTimeLimit seconds, it is considered sleeping.</p>
+                            <p>如果刚体保持Body.SLEEPY(惺忪状态)超出这一限制时间将进入休眠。</p>
                     
                         </div>
                     
@@ -3693,11 +3686,11 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The type of motion this body has. Should be one of: <a href="#property_STATIC" class="crosslink">Body.STATIC</a>, <a href="#property_DYNAMIC" class="crosslink">Body.DYNAMIC</a> and <a href="#property_KINEMATIC" class="crosslink">Body.KINEMATIC</a>.</p>
+                            <p>刚体的运动类型， <a href="#property_STATIC" class="crosslink">Body.STATIC</a>, <a href="#property_DYNAMIC" class="crosslink">Body.DYNAMIC</a> 和 <a href="#property_KINEMATIC" class="crosslink">Body.KINEMATIC</a>之一</p>
                     <ul>
-                    <li>Static bodies do not move, and they do not respond to forces or collision.</li>
-                    <li>Dynamic bodies body can move and respond to collisions and forces.</li>
-                    <li>Kinematic bodies only moves according to its .velocity, and does not respond to collisions or force.</li>
+                    <li>STATIC 刚体不可移动，也不受作用力和碰撞影响</li>
+                    <li>DYNAMIC 刚体将根据碰撞和作用力运动</li>
+                    <li>KINEMATIC 刚体根据其velocity 属性移动，也不受作用力和碰撞影响。</li>
                     </ul>
                     
                         </div>
@@ -3707,16 +3700,15 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                                 <h4>Example:</h4>
                     
                                 <div class="example-content">
-                                    <pre class="code prettyprint"><code>// Bodies are static by default. Static bodies will never move.
+                                    <pre class="code prettyprint"><code>// B刚体默认为静力学模型，静力学模型刚体永远不移动
                     var body = new Body();
                     console.log(body.type == Body.STATIC); // true
-                    </code></pre><pre class="code prettyprint"><code>// By setting the mass of a body to a nonzero number, the body
-                    // will become dynamic and will move and interact with other bodies.
+                    </code></pre><pre class="code prettyprint"><code>// 将刚体的质量设置为非零数值时，它将变成能够运动及与其他刚体进行交互的动力学模型
                     var dynamicBody = new Body({
                         mass : 1
                     });
                     console.log(dynamicBody.type == Body.DYNAMIC); // true
-                    </code></pre><pre class="code prettyprint"><code>// Kinematic bodies will only move if you change their velocity.
+                    </code></pre><pre class="code prettyprint"><code>// 运动学模型刚体仅在改变其矢量速度时发生移动
                     var kinematicBody = new Body({
                         type: Body.KINEMATIC // Type can be set via the options object.
                     });
@@ -3743,7 +3735,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The current velocity of the body.</p>
+                            <p>刚体的当前速度</p>
                     
                         </div>
                     
@@ -3768,7 +3760,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Constraint velocity that was added to the body during the last step.</p>
+                            <p>在世界最后一次步进(step)中添加到刚体的约束速度。</p>
                     
                         </div>
                     
@@ -3793,7 +3785,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>Angular constraint velocity that was added to the body during last step.</p>
+                            <p>在世界最后一次步进(step)中添加到刚体的角约束速度。</p>
                     
                         </div>
                     
@@ -3818,7 +3810,7 @@ Sets the sleepState to <a href="#property_AWAKE" class="crosslink">Body.AWAKE</a
                         </div>
                     
                         <div class="description">
-                            <p>The world that this body is added to. This property is set to NULL if the body is not added to any world.</p>
+                            <p>刚体进入的物理世界，当设置为Null 时，意味着刚体未进入任何物理世界</p>
                     
                         </div>
                     
