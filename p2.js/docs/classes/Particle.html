@@ -189,7 +189,7 @@
         
         
                             <div class="param-description">
-                                <p>(Note that this options object will be passed on to the <a href="Shape.html" class="crosslink">Shape</a> constructor.)</p>
+                                <p>(注意：这一参数将传入 <a href="Shape.html" class="crosslink">Shape</a> 的构造器)</p>
         
                             </div>
         
@@ -639,7 +639,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Body-local angle of the shape.</p>
+                            <p>基于刚体的角度</p>
                     
                         </div>
                     
@@ -664,7 +664,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Area of this shape.</p>
+                            <p>形状的面积</p>
                     
                         </div>
                     
@@ -689,7 +689,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The body this shape is attached to. A shape can only be attached to a single body.</p>
+                            <p>形状依附的刚体，一个形状只能依附在一个刚体上</p>
                     
                         </div>
                     
@@ -714,7 +714,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Bounding circle radius of this shape</p>
+                             <p>形状的包围半径</p>
                     
                         </div>
                     
@@ -739,7 +739,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Collision group that this shape belongs to (bit mask). See <a href="http://www.aurelienribon.com/blog/2011/07/box2d-tutorial-collision-filtering/">this tutorial</a>.</p>
+                            <p>形状所属的碰撞分组（位掩码）. 参见 <a href="http://www.aurelienribon.com/blog/2011/07/box2d-tutorial-collision-filtering/">这一教程</a>.</p>
                     
                         </div>
                     
@@ -753,13 +753,13 @@
                         ENEMY =  Math.pow(2,1),
                         GROUND = Math.pow(2,2)
                     
-                    // Put shapes into their groups
+                    // 为形状设置分组
                     player1Shape.collisionGroup = PLAYER;
                     player2Shape.collisionGroup = PLAYER;
                     enemyShape  .collisionGroup = ENEMY;
                     groundShape .collisionGroup = GROUND;
                     
-                    // Assign groups that each shape collide with.
+                    //为形状设置对应的碰撞分组，下例表明玩家(PLAYER) 只会和地面(GROUND)和敌人(ENEMY)碰撞，而不会与其他玩家碰撞
                     // Note that the players can collide with ground and enemies, but not with other players.
                     player1Shape.collisionMask = ENEMY | GROUND;
                     player2Shape.collisionMask = ENEMY | GROUND;
@@ -792,7 +792,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Collision mask of this shape. See .collisionGroup.</p>
+                            <p>碰撞掩码，参见 .collisionGroup.</p>
                     
                         </div>
                     
@@ -817,7 +817,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Whether to produce contact forces when in contact with other bodies. Note that contacts will be generated, but they will be disabled. That means that this shape will move through other body shapes, but it will still trigger contact events, etc.</p>
+                            <p>当与其他刚体碰撞时是否产生碰撞作用力。需要注意的是，碰撞仍会产生，但会被禁用。即：该刚体会穿过其他刚体，但仍然会触发碰撞等事件。</p>
                     
                         </div>
                     
@@ -842,7 +842,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Shape object identifier.</p>
+                            <p>形状的唯一标志符</p>
                     
                         </div>
                     
@@ -867,7 +867,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Material to use in collisions for this Shape. If this is set to null, the world will use default material properties instead.</p>
+                            <p>用于碰撞的材质，如果这被设置为null， 在物理世界中将使用默认材质替代</p>
                     
                         </div>
                     
@@ -892,7 +892,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Body-local position of the shape.</p>
+                            <p>基于刚体的位置</p>
                     
                         </div>
                     
@@ -917,7 +917,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Set to true if you want this shape to be a sensor. A sensor does not generate contacts, but it still reports contact events. This is good if you want to know if a shape is overlapping another shape, without them generating contacts.</p>
+                            <p>如果你希望此形状为传感器，则设置为true。传感器不会产生碰撞，但仍会上报碰撞事件。它在你想在不产生碰撞的情况下知道这一形状是否与其他形状重叠的情况下很实用</p>
                     
                         </div>
                     
@@ -942,7 +942,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The type of the shape. One of:</p>
+                             <p>这一形状的类型，以下类型之一：</p>
                     <ul>
                     <li><a href="Shape.html#property_CIRCLE" class="crosslink">Shape.CIRCLE</a></li>
                     <li><a href="Shape.html#property_PARTICLE" class="crosslink">Shape.PARTICLE</a></li>
