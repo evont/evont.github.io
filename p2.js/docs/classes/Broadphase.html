@@ -137,7 +137,7 @@
 
 
 <div class="box intro">
-    <p>Base class for broadphase implementations.</p>
+    <p>对粗测阶段实现的基类，碰撞检测一般分成三个部分，粗测阶段(BroadPhase)，细测(NarrowPhase)和中间(MiddlePhase),所谓BroadPhase,就是对所有的Shape进行初步检测，具体做法是检测每两个Shape的包围盒是否相交，是则送入下一阶段处理。</p>
 
 </div>
 
@@ -288,7 +288,7 @@
     </div>
 
     <div class="description">
-        <p>Check whether the bounding radius of two bodies overlap.</p>
+        <p>检查两个刚体的包围半径是否重合</p>
 
     </div>
 
@@ -329,158 +329,7 @@
 
 
 </div>
-<div id="method_boundingRadiusCheck" class="method item">
-    <h3 class="name"><code>boundingRadiusCheck</code></h3>
 
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>bodyA</code>
-                </li>
-                <li class="arg">
-                        <code>bodyB</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-        <span class="returns-inline">
-            <span class="type">Boolean</span>
-        </span>
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/src_collision_Broadphase.js.html#l84"><code>src&#x2F;collision&#x2F;Broadphase.js:84</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Check whether the bounding radius of two bodies overlap.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>参数:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">bodyA</code>
-                        <span class="type"><a href="Body.html" class="crosslink">Body</a></span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">bodyB</code>
-                        <span class="type"><a href="Body.html" class="crosslink">Body</a></span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Boolean</span>:
-            </div>
-        </div>
-
-
-</div>
-<div id="method_boundingRadiusCheck" class="method item">
-    <h3 class="name"><code>boundingRadiusCheck</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>bodyA</code>
-                </li>
-                <li class="arg">
-                        <code>bodyB</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-        <span class="returns-inline">
-            <span class="type">Boolean</span>
-        </span>
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/src_collision_Broadphase.js.html#l95"><code>src&#x2F;collision&#x2F;Broadphase.js:95</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Check whether the bounding radius of two bodies overlap.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>参数:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">bodyA</code>
-                        <span class="type"><a href="Body.html" class="crosslink">Body</a></span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">bodyB</code>
-                        <span class="type"><a href="Body.html" class="crosslink">Body</a></span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Boolean</span>:
-            </div>
-        </div>
-
-
-</div>
 <div id="method_canCollide" class="method item">
     <h3 class="name"><code>canCollide</code></h3>
 
@@ -516,7 +365,7 @@
     </div>
 
     <div class="description">
-        <p>Check whether two bodies are allowed to collide at all.</p>
+        <p>检查两个刚体是否允许碰撞</p>
 
     </div>
 
@@ -589,7 +438,7 @@
     </div>
 
     <div class="description">
-        <p>Get all potential intersecting body pairs.</p>
+        <p>获取所有可能相交的刚体配对</p>
 
     </div>
 
@@ -603,7 +452,7 @@
 
 
                     <div class="param-description">
-                        <p>The world to search in.</p>
+                        <p>需要搜索的物理世界</p>
 
                     </div>
 
@@ -616,7 +465,7 @@
 
             <div class="returns-description">
                         <span class="type">Array</span>:
-                    <p>An array of the bodies, ordered in pairs. Example: A result of [a,b,c,d] means that the potential pairs are: (a,b), (c,d).</p>
+                    <p>一个包含刚体的数组， 根据配对顺序排列，例如：[a,b,c,d] 表示潜在配对组合为(a,b), (c,d)</p>
 
             </div>
         </div>
@@ -652,7 +501,7 @@
     </div>
 
     <div class="description">
-        <p>Set the world that we are searching for collision pairs in.</p>
+        <p>设置需要搜索碰撞配对的物理世界</p>
 
     </div>
 
@@ -700,7 +549,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Axis aligned bounding box type.</p>
+                            <p>包围盒类型</p>
                     
                         </div>
                     
@@ -726,7 +575,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Bounding circle type.</p>
+                            <p>包围半径类型</p>
                     
                         </div>
                     
@@ -751,7 +600,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The bounding volume type to use in the broadphase algorithms. Should be set to Broadphase.AABB or Broadphase.BOUNDING_CIRCLE.</p>
+                            <p>在BroadPhase算法中使用的包围盒类型。应被设置为 Broadphase.AABB 或Broadphase.BOUNDING_CIRCLE.。</p>
                     
                         </div>
                     
@@ -776,7 +625,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The resulting overlapping pairs. Will be filled with results during .getCollisionPairs().</p>
+                            <p>重合配对结果，在 .getCollisionPairs() 执行时填充结果</p>
                     
                         </div>
                     
@@ -801,7 +650,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The world to search for collision pairs in. To change it, use .setWorld()</p>
+                            <p>需要搜索的物理世界，更改这一属性使用 .setWorld() 方法</p>
                     
                         </div>
                     
