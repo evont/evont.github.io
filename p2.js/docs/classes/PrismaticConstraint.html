@@ -140,7 +140,7 @@
 
 
 <div class="box intro">
-    <p>Constraint that only allows bodies to move along a line, relative to each other. See <a href="http://www.iforce2d.net/b2dtut/joints-prismatic">this tutorial</a>. Also called &quot;slider constraint&quot;.</p>
+    <p>滑块约束， 只允许刚体只能沿着彼此之间的一条直线运动。参见 <a href="http://www.iforce2d.net/b2dtut/joints-prismatic">这一教程</a></p>
 
 </div>
 
@@ -225,7 +225,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Max force to be applied by the constraint</p>
+                                            <p>施加在这一约束上的最大作用力</p>
         
                                         </div>
         
@@ -236,7 +236,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Body A&#39;s anchor point, defined in its own local frame.</p>
+                                            <p>BodyA 的目标点，在其范围内中定义</p>
         
                                         </div>
         
@@ -247,7 +247,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Body B&#39;s anchor point, defined in its own local frame.</p>
+                                            <p>BodyB 的目标点，在其范围内中定义</p>
         
                                         </div>
         
@@ -258,7 +258,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>An axis, defined in body A frame, that body B&#39;s anchor point may slide along.</p>
+                                            <p>BodyB 中的点可能沿着滑动的一条轴， 在BodyA 范围内定义</p>
         
                                         </div>
         
@@ -269,7 +269,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>If set to true, bodyB will be free to rotate around its anchor point.</p>
+                                            <p>如果为真，BodyB 将自由地绕着这个目标点旋转</p>
         
                                         </div>
         
@@ -447,7 +447,7 @@
     </div>
 
     <div class="description">
-        <p>Disable the rotational motor</p>
+        <p>禁止旋转动力</p>
 
     </div>
 
@@ -478,7 +478,7 @@
     </div>
 
     <div class="description">
-        <p>Enable the motor</p>
+        <p>启用动力</p>
 
     </div>
 
@@ -518,7 +518,7 @@
     </div>
 
     <div class="description">
-        <p>Set the constraint limits.</p>
+        <p>设置约束限制</p>
 
     </div>
 
@@ -532,7 +532,7 @@
 
 
                     <div class="param-description">
-                        <p>Lower limit.</p>
+                        <p>下限</p>
 
                     </div>
 
@@ -543,7 +543,7 @@
 
 
                     <div class="param-description">
-                        <p>Upper limit.</p>
+                        <p>上限</p>
 
                     </div>
 
@@ -890,7 +890,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Lower constraint limit. The constraint position is forced to be larger than this value.</p>
+                            <p>约束下限，这个约束位置必须大于这一数值</p>
                     
                         </div>
                     
@@ -915,7 +915,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Set to true to enable lower limit.</p>
+                            <p>是否启用下限</p>
                     
                         </div>
                     
@@ -940,7 +940,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The current motor state. Enable or disable the motor using .enableMotor</p>
+                            <p>现在的动力状态，开启或禁用状态使用 .enableMotor</p>
                     
                         </div>
                     
@@ -965,7 +965,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Equation used for the motor.</p>
+                            <p>动力的方程</p>
                     
                         </div>
                     
@@ -990,7 +990,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Set the target speed for the motor.</p>
+                            <p>设置动力的目标速度</p>
                     
                         </div>
                     
@@ -1015,7 +1015,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The position of anchor A relative to anchor B, along the constraint axis.</p>
+                            <p>目标点A 相对目标点B 沿着约束轴的位置</p>
                     
                         </div>
                     
@@ -1065,7 +1065,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Upper constraint limit. The constraint position is forced to be smaller than this value.</p>
+                            <p>约束上限，约束位置必需小于这一数值</p>
                     
                         </div>
                     
@@ -1090,7 +1090,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Set to true to enable upper limit.</p>
+                            <p>是否启用上限</p>
                     
                         </div>
                     
