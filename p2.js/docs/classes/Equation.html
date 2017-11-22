@@ -194,7 +194,7 @@
         
         
                             <div class="param-description">
-                                <p>First body participating in the equation</p>
+                                <p>将要参与约束的第一个刚体</p>
         
                             </div>
         
@@ -205,7 +205,7 @@
         
         
                             <div class="param-description">
-                                <p>Second body participating in the equation</p>
+                                <p>将要参与约束的第二个刚体</p>
         
                             </div>
         
@@ -216,7 +216,7 @@
         
         
                             <div class="param-description">
-                                <p>Minimum force to apply. Default: -Number.MAX_VALUE</p>
+                                <p>施加的最小作用力，默认值：-Number.MIN_VALUE</p>
         
                             </div>
         
@@ -227,7 +227,7 @@
         
         
                             <div class="param-description">
-                                <p>Maximum force to apply. Default: Number.MAX_VALUE</p>
+                                <p>施加的最大作用力，默认值：-Number.MAX_VALUE</p>
         
                             </div>
         
@@ -395,7 +395,7 @@
     </div>
 
     <div class="description">
-        <p>Add constraint velocity to the bodies.</p>
+        <p>添加约束速度到刚体中</p>
 
     </div>
 
@@ -445,7 +445,7 @@
     </div>
 
     <div class="description">
-        <p>Computes the RHS of the SPOOK equation</p>
+        <p>计算SPOOK 方程的RHS 值（Computes the RHS of the SPOOK equation）</p>
 
     </div>
 
@@ -486,7 +486,7 @@
     </div>
 
     <div class="description">
-        <p>Computes G*inv(M)*f, where M is the mass matrix with diagonal blocks for each body, and f are the forces on the bodies.</p>
+        <p>计算G值乘以 <a href="https://cn.mathworks.com/help/matlab/ref/inv.html?requestedDomain=www.mathworks.com">inv(M)</a>(M 为每个物体对角线块的质量矩阵) 乘以f (刚体的作用力)</p>
 
     </div>
 
@@ -527,7 +527,7 @@
     </div>
 
     <div class="description">
-        <p>Computes G*inv(M)*G&#39;</p>
+        <p>计算G值乘以 <a href="https://cn.mathworks.com/help/matlab/ref/inv.html?requestedDomain=www.mathworks.com">inv(M)</a>(M 为每个物体对角线块的质量矩阵) 乘以G的导数 G'</p>
 
     </div>
 
@@ -568,7 +568,7 @@
     </div>
 
     <div class="description">
-        <p>Computes G*q, where q are the generalized body coordinates</p>
+        <p>计算G值乘以q(q 为广义刚体坐标)</p>
 
     </div>
 
@@ -609,7 +609,7 @@
     </div>
 
     <div class="description">
-        <p>Computes G*W, where W are the body velocities</p>
+        <p>计算G值乘以W(W 为刚体的速度)</p>
 
     </div>
 
@@ -650,7 +650,7 @@
     </div>
 
     <div class="description">
-        <p>Computes G*Wlambda, where W are the body velocities</p>
+        <p>计算G值乘以W lambda (W 为刚体的速度)</p>
 
     </div>
 
@@ -697,7 +697,7 @@
     </div>
 
     <div class="description">
-        <p>Compute the denominator part of the SPOOK equation: C = G*inv(M)*G&#39; + eps</p>
+        <p>计算SPOOK等式的分母部分：C = G * inv(M)* G'+ eps</p>
 
     </div>
 
@@ -711,7 +711,7 @@
 
 
                     <div class="param-description">
-                         
+                        一个极小的正数，用于控制迭代精度；
                     </div>
 
                 </li>
@@ -754,7 +754,7 @@
     </div>
 
     <div class="description">
-        <p>Multiply a jacobian entry with corresponding positions or velocities</p>
+        <p>将雅可比项乘以相应的位置或速度</p>
 
     </div>
 
@@ -792,7 +792,7 @@
     </div>
 
     <div class="description">
-        <p>Compute SPOOK 参数 .a, .b and .epsilon according to the current 参数. See equations 9, 10 and 11 in the <a href="http://www8.cs.umu.se/kurser/5DV058/VT09/lectures/spooknotes.pdf">SPOOK notes</a>.</p>
+        <p>根据当前参数计算SPOOK参数.a，.b和.epsilon。 参见<a href="http://www8.cs.umu.se/kurser/5DV058/VT09/lectures/spooknotes.pdf">SPOOK笔记中的等式9,10和11。</a>.</p>
 
     </div>
 
@@ -823,7 +823,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>First body participating in the constraint</p>
+                            <p>将要参与约束的第一个刚体</p>
                     
                         </div>
                     
@@ -848,7 +848,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Second body participating in the constraint</p>
+                            <p>将要参与约束的第二个刚体</p>
                     
                         </div>
                     
@@ -874,7 +874,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The default relaxation when creating a new Equation.</p>
+                            <p>创建新方程时的默认弛豫度</p>
                     
                         </div>
                     
@@ -901,7 +901,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The default stiffness when creating a new Equation.</p>
+                            <p>创建新方程时的默认刚度</p>
                     
                         </div>
                     
@@ -927,7 +927,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Whether this equation is enabled or not. If true, it will be added to the solver.</p>
+                            <p>设置或获取当前方程式的可用状态，如果为true， 它将被添加到求解中</p>
                     
                         </div>
                     
@@ -952,7 +952,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The Jacobian entry of this equation. 6 numbers, 3 per body (x,y,angle).</p>
+                            <p>两个连接对象的<a href="http://mathworld.wolfram.com/Jacobian.html">雅克布矩阵</a>，包含了6个数字，分别是两个对象的x, y 和 angle</p>
                     
                         </div>
                     
@@ -977,7 +977,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Max force to apply when solving.</p>
+                            <p>求解时施加的最大作用力</p>
                     
                         </div>
                     
@@ -1002,7 +1002,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Minimum force to apply when solving.</p>
+                            <p>求解时施加的最小作用力</p>
                     
                         </div>
                     
@@ -1027,7 +1027,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The resulting constraint multiplier from the last solve. This is mostly equivalent to the force produced by the constraint.</p>
+                            <p>由上一次求解得到的约束乘数，大致相当于约束所产生的作用力</p>
                     
                         </div>
                     
@@ -1052,7 +1052,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Indicates if stiffness or relaxation was changed.</p>
+                            <p>标志刚度或弛豫是否改变</p>
                     
                         </div>
                     
@@ -1077,7 +1077,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Relative velocity.</p>
+                            <p>相对速度</p>
                     
                         </div>
                     
@@ -1102,7 +1102,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The number of time steps needed to stabilize the constraint equation. Typically between 3 and 5 time steps.</p>
+                            <p>稳定约束方程所需的步进， 通常为3到5个步进</p>
                     
                         </div>
                     
@@ -1127,7 +1127,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The stiffness of this equation. Typically chosen to a large number (~1e7), but can be chosen somewhat freely to get a stable simulation.</p>
+                            <p>约束方程的刚度，通常使用一个较大的数字（〜1e7），但也可以自由设置一个数字以获得比较稳定的模拟</p>
                     
                         </div>
                     
