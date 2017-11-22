@@ -140,7 +140,7 @@
 
 
 <div class="box intro">
-    <p>Constraint that tries to keep the distance between two bodies constant.</p>
+    <p>保持两个物体之间的距离不变的约束。</p>
 
 </div>
 
@@ -225,29 +225,29 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>The distance to keep between the anchor points. Defaults to the current distance between the bodies.</p>
+                                            <p>两个目标点保持的距离，默认为当前两个刚体之间的距离</p>
         
                                         </div>
         
                                     </li>
                                     <li class="param">
-                                            <code class="param-name optional">[localAnchorA] The anchor point for bodyA, defined locally in bodyA frame. Defaults to [0,0]</code>
+                                            <code class="param-name optional">[localAnchorA] </code>
                                             <span class="type">Array</span>
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>.</p>
+                                            <p>刚体A 的目标点，在刚体A的范围内定义，默认为[0, 0]</p>
         
                                         </div>
         
                                     </li>
                                     <li class="param">
-                                            <code class="param-name optional">[localAnchorB] The anchor point for bodyB, defined locally in bodyB frame. Defaults to [0,0]</code>
+                                            <code class="param-name optional">[localAnchorB] </code>
                                             <span class="type">Array</span>
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>.</p>
+                                            <p>刚体B 的目标点，在刚体A的范围内定义，默认为[0, 0]</p>
         
                                         </div>
         
@@ -258,7 +258,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Maximum force to apply.</p>
+                                            <p>施加的最大作用力</p>
         
                                         </div>
         
@@ -274,13 +274,13 @@
                     <h4>Example:</h4>
         
                     <div class="example-content">
-                        <pre class="code prettyprint"><code>// If distance is not given as an option, then the current distance between the bodies is used.
-        // In this example, the bodies will be constrained to have a distance of 2 between their centers.
+                        <pre class="code prettyprint"><code>// 如果距离没在参数中给出，则使用当前两个刚体之间的距离
+        //下例中，刚体之间将被约束与彼此中心有两个单位的距离
         var bodyA = new Body({ mass: 1, position: [-1, 0] });
         var bodyB = new Body({ mass: 1, position: [1, 0] });
         var constraint = new DistanceConstraint(bodyA, bodyB);
         world.addConstraint(constraint);
-        </code></pre><pre class="code prettyprint"><code>// Manually set the distance and anchors
+        </code></pre><pre class="code prettyprint"><code>// 自定义设置距离和目标点
         var constraint = new DistanceConstraint(bodyA, bodyB, {
             distance: 1,          // Distance to keep between the points
             localAnchorA: [1, 0], // Point on bodyA
@@ -427,7 +427,7 @@
     </div>
 
     <div class="description">
-        <p>Get the max force</p>
+        <p>获取最大作用力</p>
 
     </div>
 
@@ -471,7 +471,7 @@
     </div>
 
     <div class="description">
-        <p>Set the max force to be used</p>
+        <p>设置使用的最大作用力</p>
 
     </div>
 
@@ -524,7 +524,7 @@
     </div>
 
     <div class="description">
-        <p>Set relaxation for this constraint.</p>
+        <p>为这个约束设置弛豫度</p>
 
     </div>
 
@@ -577,7 +577,7 @@
     </div>
 
     <div class="description">
-        <p>Set stiffness for this constraint.</p>
+        <p>为这个约束设置刚度</p>
 
     </div>
 
@@ -627,7 +627,7 @@
     </div>
 
     <div class="description">
-        <p>Update the constraint equations. Should be done if any of the bodies changed position, before solving.</p>
+        <p>在求解前更新约束方程，任何刚体改变位置时完成</p>
 
     </div>
 
@@ -708,7 +708,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Set to true if you want the connected bodies to collide.</p>
+                            <p>如果你想将连接的刚体碰撞，将其设置为true</p>
                     
                         </div>
                     
@@ -734,7 +734,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The distance to keep.</p>
+                            <p>需要保持的距离</p>
                     
                         </div>
                     
@@ -759,7 +759,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Equations to be solved in this constraint</p>
+                            <p>用于求解约束的方程</p>
                     
                         </div>
                     
@@ -784,7 +784,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Local anchor in body A.</p>
+                            <p>刚体A 中的目标点</p>
                     
                         </div>
                     
@@ -809,7 +809,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Local anchor in body B.</p>
+                            <p>刚体B 中的目标点</p>
                     
                         </div>
                     
@@ -834,7 +834,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The lower constraint limit.</p>
+                            <p>约束下限。</p>
                     
                         </div>
                     
@@ -859,7 +859,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>If the lower limit is enabled or not.</p>
+                            <p>是否启用约束下限</p>
                     
                         </div>
                     
@@ -884,7 +884,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Max force to apply.</p>
+                            <p>施加的最大作用力</p>
                     
                         </div>
                     
@@ -909,7 +909,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Current constraint position. This is equal to the current distance between the world anchor points.</p>
+                            <p>当前约束位置，等于当前目标点在世界中的距离</p>
                     
                         </div>
                     
@@ -934,7 +934,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The type of constraint. May be one of Constraint.DISTANCE, Constraint.GEAR, Constraint.LOCK, Constraint.PRISMATIC or Constraint.REVOLUTE.</p>
+                            <p>这一约束的类型，以下类型之一：                                     <ul>                                     <li><a href="#property_DISTANCE" class="crosslink">Constraint.DISTANCE</a></li>                                     <li><a href="#property_GEAR" class="crosslink">Constraint.GEAR</a></li>                                     <li><a href="#property_LOCK" class="crosslink">Constraint.LOCK</a></li>                                     <li><a href="#property_PRISMATIC" class="crosslink">Constraint.PRISMATIC</a></li>                                     <li><a href="#property_REVOLUTE" class="crosslink">Constraint.REVOLUTE</a></li>                                     </ul></p>
                     
                         </div>
                     
