@@ -140,7 +140,7 @@
 
 
 <div class="box intro">
-    <p>Splits the system of bodies and equations into independent islands</p>
+    <p>将刚体和方程式系统划分为不同的岛屿</p>
 
 </div>
 
@@ -351,7 +351,7 @@
     </div>
 
     <div class="description">
-        <p>Add an equation to be solved.</p>
+        <p>添加一个用于求解的方程</p>
 
     </div>
 
@@ -404,7 +404,7 @@
     </div>
 
     <div class="description">
-        <p>Add equations. Same as .addEquation, but this time the argument is an array of Equations</p>
+        <p>添加多个方程，作用同 .addEquation，但参数为包含多个方程的数组</p>
 
     </div>
 
@@ -463,7 +463,7 @@
     </div>
 
     <div class="description">
-        <p>Runs the search algorithm, starting at a root node. The resulting bodies and equations will be stored in the provided arrays.</p>
+        <p>从根节点开始运行搜索算法。得到的刚体和方程将被存储在提供的数组中</p>
 
     </div>
 
@@ -477,7 +477,7 @@
 
 
                     <div class="param-description">
-                        <p>The node to start from</p>
+                        <p>起始节点</p>
 
                     </div>
 
@@ -488,7 +488,7 @@
 
 
                     <div class="param-description">
-                        <p>An array to append resulting Bodies to.</p>
+                        <p>用于添加搜索到的刚体的数组</p>
 
                     </div>
 
@@ -499,7 +499,7 @@
 
 
                     <div class="param-description">
-                        <p>An array to append resulting Equations to.</p>
+                        <p>用于添加搜索到的方程的数组</p>
 
                     </div>
 
@@ -542,7 +542,7 @@
     </div>
 
     <div class="description">
-        <p>Emit an event.</p>
+        <p>触发一个事件</p>
 
     </div>
 
@@ -579,7 +579,7 @@
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -619,7 +619,7 @@
     </div>
 
     <div class="description">
-        <p>Get an unvisited node from a list of nodes.</p>
+        <p>从一个节点列表中获取一个未访问节点</p>
 
     </div>
 
@@ -645,7 +645,7 @@
 
             <div class="returns-description">
                         <span class="type"><a href="IslandNode.html" class="crosslink">IslandNode</a> | Boolean</span>:
-                    <p>The node if found, else false.</p>
+                    <p>找到的节点，如果没有则返回false</p>
 
             </div>
         </div>
@@ -687,7 +687,7 @@
     </div>
 
     <div class="description">
-        <p>Check if an event listener is added</p>
+        <p>检查这一事件监听器是否添加</p>
 
     </div>
 
@@ -763,7 +763,7 @@
     </div>
 
     <div class="description">
-        <p>Remove an event listener</p>
+        <p>移除这一事件监听器</p>
 
     </div>
 
@@ -799,7 +799,7 @@
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -841,7 +841,7 @@
     </div>
 
     <div class="description">
-        <p>Add an event listener</p>
+        <p>添加一个事件监听器</p>
 
     </div>
 
@@ -877,7 +877,7 @@
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -907,7 +907,7 @@
     </div>
 
     <div class="description">
-        <p>Remove all currently added equations.</p>
+        <p>移除当前所有的方程</p>
 
     </div>
 
@@ -944,7 +944,7 @@
     </div>
 
     <div class="description">
-        <p>Remove an equation.</p>
+        <p>移除给定的方程</p>
 
     </div>
 
@@ -1000,7 +1000,7 @@
     </div>
 
     <div class="description">
-        <p>Method to be implemented in each subclass</p>
+        <p>在每个子类中将被继承的方法</p>
 
     </div>
 
@@ -1066,7 +1066,7 @@
     </div>
 
     <div class="description">
-        <p>Solves all constraints in an island.</p>
+        <p>求解所有给定岛屿(参见island 类)上的约束</p>
 
     </div>
 
@@ -1123,7 +1123,7 @@
     </div>
 
     <div class="description">
-        <p>Sort all equations using the .equationSortFunction. Should be called by subclasses before solving.</p>
+        <p>使用 .equationSortFunction将所有方程排序，应在求解前被子类调用</p>
 
     </div>
 
@@ -1163,7 +1163,7 @@
     </div>
 
     <div class="description">
-        <p>Split the world into independent islands. The result is stored in .islands.</p>
+        <p>将物理世界划分为不同的岛屿，结果将存储在 .islands 中</p>
 
     </div>
 
@@ -1189,7 +1189,7 @@
 
             <div class="returns-description">
                         <span class="type">Array</span>:
-                    <p>The generated islands</p>
+                    <p>生成的岛屿</p>
 
             </div>
         </div>
@@ -1231,7 +1231,7 @@
     </div>
 
     <div class="description">
-        <p>Visit a node.</p>
+        <p>访问一个节点</p>
 
     </div>
 
@@ -1301,7 +1301,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The equations to split. Manually fill this array before running .split().</p>
+                            <p>将要拆分的方程，在执行 .split()前手动填充</p>
                     
                         </div>
                     
@@ -1326,7 +1326,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Function that is used to sort all equations before each solve.</p>
+                            <p>用于将所有方程在求解前进行排序的函数</p>
                     
                         </div>
                     
@@ -1424,7 +1424,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The resulting graph nodes.</p>
+                            <p>结果生成的图节点</p>
                     
                         </div>
                     

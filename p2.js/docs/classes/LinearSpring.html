@@ -140,8 +140,8 @@
 
 
 <div class="box intro">
-    <p>A spring, connecting two bodies.</p>
-<p>The Spring explicitly adds force and angularForce to the bodies.</p>
+    <p>连接两个物体的弹簧。</p>
+<p>弹簧显式地增加了刚体的作用力和角力</p>
 
 </div>
 
@@ -226,7 +226,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>A number &gt; 0. Default is the current distance between the world anchor points.</p>
+                                            <p>正数，默认为两个目标点之间当前的距离</p>
         
                                         </div>
         
@@ -237,7 +237,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Spring constant (see Hookes Law). A number &gt;= 0.</p>
+                                            <p>弹性系数（参见 胡克定律），正数</p>
         
                                         </div>
         
@@ -248,7 +248,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>A number &gt;= 0. Default: 1</p>
+                                            <p>正数，默认为 1</p>
         
                                         </div>
         
@@ -259,7 +259,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Where to hook the spring to body A, in world coordinates. Overrides the option &quot;localAnchorA&quot; if given.</p>
+                                            <p>在世界坐标系中将弹簧与BodyA 挂钩的位置，将覆盖localAnchorA（如果给定） </p>
         
                                         </div>
         
@@ -280,7 +280,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Where to hook the spring to body A, in local body coordinates. Defaults to the body center.</p>
+                                            <p>在刚体范围坐标系中将弹簧与BodyA 挂钩的位置，默认为刚体中心</p>
         
                                         </div>
         
@@ -411,7 +411,7 @@
     </div>
 
     <div class="description">
-        <p>Apply the spring force to the connected bodies.</p>
+        <p>将弹簧力施加到相连的物体上</p>
 
     </div>
 
@@ -448,7 +448,7 @@
     </div>
 
     <div class="description">
-        <p>Get the anchor point on body A, in world coordinates.</p>
+        <p>在世界坐标系中获取BodyA 上的锚点</p>
 
     </div>
 
@@ -462,7 +462,7 @@
 
 
                     <div class="param-description">
-                        <p>The vector to store the result in.</p>
+                        <p>存储结果的向量</p>
 
                     </div>
 
@@ -502,7 +502,7 @@
     </div>
 
     <div class="description">
-        <p>Get the anchor point on body B, in world coordinates.</p>
+        <p>在世界坐标系中获取BodyB 上的锚点</p>
 
     </div>
 
@@ -516,7 +516,7 @@
 
 
                     <div class="param-description">
-                        <p>The vector to store the result in.</p>
+                        <p>存储结果的向量</p>
 
                     </div>
 
@@ -556,7 +556,7 @@
     </div>
 
     <div class="description">
-        <p>Set the anchor point on body A, using world coordinates.</p>
+        <p>在世界坐标系中设置BodyA 上的锚点</p>
 
     </div>
 
@@ -609,7 +609,7 @@
     </div>
 
     <div class="description">
-        <p>Set the anchor point on body B, using world coordinates.</p>
+        <p>在世界坐标系中设置BodyB 上的锚点</p>
 
     </div>
 
@@ -656,7 +656,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>First connected body.</p>
+                            <p>连接的第一个刚体</p>
                     
                         </div>
                     
@@ -681,7 +681,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Second connected body.</p>
+                            <p>连接的第二个刚体</p>
                     
                         </div>
                     
@@ -706,7 +706,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Damping of the spring.</p>
+                            <p>弹簧阻尼</p>
                     
                         </div>
                     
@@ -731,7 +731,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Anchor for bodyA in local bodyA coordinates.</p>
+                            <p>在BodyA范围坐标系中的锚点.</p>
                     
                         </div>
                     
@@ -756,7 +756,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Anchor for bodyB in local bodyB coordinates.</p>
+                            <p>在BodyB范围坐标系中的锚点</p>
                     
                         </div>
                     
@@ -781,7 +781,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Rest length of the spring.</p>
+                            <p>弹簧的静止长度</p>
                     
                         </div>
                     
@@ -806,7 +806,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Stiffness of the spring.</p>
+                            <p>弹簧刚度</p>
                     
                         </div>
                     

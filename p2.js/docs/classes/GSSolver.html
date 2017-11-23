@@ -140,7 +140,7 @@
 
 
 <div class="box intro">
-    <p>Iterative Gauss-Seidel constraint equation solver.</p>
+    <p>高斯-赛德尔迭代约束方程求解</p>
 
 </div>
 
@@ -356,7 +356,7 @@
     </div>
 
     <div class="description">
-        <p>Add an equation to be solved.</p>
+        <p>添加一个用于求解的方程</p>
 
     </div>
 
@@ -409,7 +409,7 @@
     </div>
 
     <div class="description">
-        <p>Add equations. Same as .addEquation, but this time the argument is an array of Equations</p>
+        <p>添加多个方程，作用同 .addEquation，但参数为包含多个方程的数组</p>
 
     </div>
 
@@ -465,7 +465,7 @@
     </div>
 
     <div class="description">
-        <p>Emit an event.</p>
+        <p>触发一个事件</p>
 
     </div>
 
@@ -502,7 +502,7 @@
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -544,7 +544,7 @@
     </div>
 
     <div class="description">
-        <p>Check if an event listener is added</p>
+        <p>检查这一事件监听器是否添加</p>
 
     </div>
 
@@ -620,7 +620,7 @@
     </div>
 
     <div class="description">
-        <p>Remove an event listener</p>
+        <p>移除这一事件监听器</p>
 
     </div>
 
@@ -656,7 +656,7 @@
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -698,7 +698,7 @@
     </div>
 
     <div class="description">
-        <p>Add an event listener</p>
+        <p>添加一个事件监听器</p>
 
     </div>
 
@@ -734,7 +734,7 @@
 
             <div class="returns-description">
                         <span class="type"><a href="EventEmitter.html" class="crosslink">EventEmitter</a></span>:
-                    <p>The self object, for chainability.</p>
+                    <p>自身，用于链式调用</p>
 
             </div>
         </div>
@@ -764,7 +764,7 @@
     </div>
 
     <div class="description">
-        <p>Remove all currently added equations.</p>
+        <p>移除当前所有的方程</p>
 
     </div>
 
@@ -801,7 +801,7 @@
     </div>
 
     <div class="description">
-        <p>Remove an equation.</p>
+        <p>移除给定的方程</p>
 
     </div>
 
@@ -860,7 +860,7 @@
     </div>
 
     <div class="description">
-        <p>Solve the system of equations</p>
+        <p>解方程组</p>
 
     </div>
 
@@ -928,7 +928,7 @@
     </div>
 
     <div class="description">
-        <p>Solves all constraints in an island.</p>
+        <p>求解所有给定岛屿(参见island 类)上的约束</p>
 
     </div>
 
@@ -985,7 +985,7 @@
     </div>
 
     <div class="description">
-        <p>Sort all equations using the .equationSortFunction. Should be called by subclasses before solving.</p>
+        <p>使用 .equationSortFunction将所有方程排序，应在求解前被子类调用</p>
 
     </div>
 
@@ -1016,7 +1016,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Current equations in the solver.</p>
+                            <p>求解器中当前的所有方程</p>
                     
                         </div>
                     
@@ -1041,7 +1041,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Function that is used to sort all equations before each solve.</p>
+                            <p>用于将所有方程在求解前进行排序的函数</p>
                     
                         </div>
                     
@@ -1066,8 +1066,8 @@
                         </div>
                     
                         <div class="description">
-                            <p>Number of solver iterations that are used to approximate normal forces used for friction (F_friction = mu * F_normal). These friction forces will override any other friction forces that are set. If you set frictionIterations = 0, then this feature will be disabled.</p>
-                    <p>Use only frictionIterations &gt; 0 if the approximated normal force (F_normal = mass * gravity) is not good enough. Examples of where it can happen is in space games where gravity is zero, or in tall stacks where the normal force is large at bottom but small at top.</p>
+                            <p>用于估算摩擦(F_friction = mu * F_normal)使用的法向力的求解迭代次数， 这些摩擦力将抵消设置的其他摩擦力。如果你将frictionIterations 设置为0， 则这一功能将被禁用</p>
+                    <p>仅在法向力估值(F_normal = mass * gravity)不够适合的情况下使用 frictionIterations > 0，例如在太空游戏中，重力为0，或在堆叠时，下部的法向力大而上部的法向力小；</p>
                     
                         </div>
                     
@@ -1093,7 +1093,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The max number of iterations to do when solving. More gives better results, but is more expensive.</p>
+                            <p>求解时的最大迭代次数，越大结果越好，但性能开销越大</p>
                     
                         </div>
                     
@@ -1118,7 +1118,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The error tolerance, per constraint. If the total error is below this limit, the solver will stop iterating. Set to zero for as good solution as possible, but to something larger than zero to make computations faster.</p>
+                            <p>每个约束的容差，如果总误差低于此值，求解器将停止迭代，设置为0能尽可能的得到更精确的结果，但大于0时计算速度会更快</p>
                     
                         </div>
                     
@@ -1144,7 +1144,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The number of iterations that were made during the last solve. If .tolerance is zero, this value will always be equal to .iterations, but if .tolerance is larger than zero, and the solver can quit early, then this number will be somewhere between 1 and .iterations.</p>
+                            <p>最后一次求解过程中产生的迭代次数，如果.tolerance 为0，那么该值总是等于.iterations，但如果.tolerance 大于0时，求解器会更早退出，那么这个数字将介于1 - .iterarions 之间</p>
                     
                         </div>
                     
@@ -1169,7 +1169,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Set to true to set all right hand side terms to zero when solving. Can be handy for a few applications.</p>
+                            <p>设置为true 会在求解时将所有右侧项设置为0， 对于小型应用来说很方便</p>
                     
                         </div>
                     
