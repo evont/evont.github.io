@@ -137,7 +137,7 @@
 
 
 <div class="box intro">
-    <p>Narrowphase. Creates contacts and friction given shapes and transforms.</p>
+    <p>细测阶段. 为给定的形状和变换创建碰撞和摩擦</p>
 
 </div>
 
@@ -520,7 +520,7 @@
     </div>
 
     <div class="description">
-        <p>Capsule/capsule narrowphase</p>
+        <p>胶囊与胶囊的细测</p>
 
     </div>
 
@@ -664,7 +664,7 @@
     </div>
 
     <div class="description">
-        <p>Circle/capsule Narrowphase</p>
+        <p>圆形与胶囊的细测</p>
 
     </div>
 
@@ -817,7 +817,7 @@
     </div>
 
     <div class="description">
-        <p>Circle/circle Narrowphase</p>
+        <p>圆形与圆形的细测</p>
 
     </div>
 
@@ -922,7 +922,7 @@
 
 
                     <div class="param-description">
-                        <p>Optional radius to use for shapeA</p>
+                        <p>shapeA 的半径，可选</p>
 
                     </div>
 
@@ -934,7 +934,7 @@
 
 
                     <div class="param-description">
-                        <p>Optional radius to use for shapeB</p>
+                        <p>shapeB 的半径，可选</p>
 
                     </div>
 
@@ -1001,7 +1001,7 @@
     </div>
 
     <div class="description">
-        <p>Circle/convex Narrowphase.</p>
+        <p>圆形与凸面的细测</p>
 
     </div>
 
@@ -1434,7 +1434,7 @@
     </div>
 
     <div class="description">
-        <p>Circle/line Narrowphase</p>
+        <p>圆形与线的细测</p>
 
     </div>
 
@@ -1528,7 +1528,7 @@
 
 
                     <div class="param-description">
-                        <p>If set to true, this function will return the result (intersection or not) without adding equations.</p>
+                        <p>如果设置为true， 则该函数将在不添加方程的情况下返回是否相交的结果</p>
 
                     </div>
 
@@ -1539,7 +1539,7 @@
 
 
                     <div class="param-description">
-                        <p>Radius to add to the line. Can be used to test Capsules.</p>
+                        <p>添加到线型的半径，可用于测试胶囊</p>
 
                     </div>
 
@@ -1550,7 +1550,7 @@
 
 
                     <div class="param-description">
-                        <p>If set, this value overrides the circle shape radius.</p>
+                        <p>如果设置了将覆盖圆形的半径</p>
 
                     </div>
 
@@ -1614,7 +1614,7 @@
     </div>
 
     <div class="description">
-        <p>Circle/Particle Narrowphase</p>
+        <p>圆形和粒子的细测</p>
 
     </div>
 
@@ -1765,7 +1765,7 @@
     </div>
 
     <div class="description">
-        <p>Creates ContactEquations and FrictionEquations for a collision.</p>
+        <p>圆与平面的细测</p>
 
     </div>
 
@@ -1779,7 +1779,7 @@
 
 
                     <div class="param-description">
-                        <p>The first body that should be connected to the equations.</p>
+                        <p>应连接到方程的第一个刚体</p>
 
                     </div>
 
@@ -1790,7 +1790,7 @@
 
 
                     <div class="param-description">
-                        <p>The circle shape participating in the collision.</p>
+                        <p>参与碰撞的圆形</p>
 
                     </div>
 
@@ -1801,7 +1801,7 @@
 
 
                     <div class="param-description">
-                        <p>Extra offset to take into account for the Shape, in addition to the one in circleBody.position. Will <em>not</em> be rotated by circleBody.angle (maybe it should, for sake of homogenity?). Set to null if none.</p>
+                        <p>计算形状时的额外偏移，添加到 circleBody.position. 将不会被circleBody.angle 旋转 (maybe it should, for sake of homogenity?)，如果没有则设置为null</p>
 
                     </div>
 
@@ -1812,7 +1812,7 @@
 
 
                     <div class="param-description">
-                        <p>The second body that should be connected to the equations.</p>
+                        <p>应连接到方程的第二个刚体</p>
 
                     </div>
 
@@ -1823,7 +1823,7 @@
 
 
                     <div class="param-description">
-                        <p>The Plane shape that is participating</p>
+                        <p>参与碰撞的平面形状</p>
 
                     </div>
 
@@ -1834,7 +1834,7 @@
 
 
                     <div class="param-description">
-                        <p>Extra offset for the plane shape.</p>
+                        <p>平面形状的额外偏移</p>
 
                     </div>
 
@@ -1845,7 +1845,7 @@
 
 
                     <div class="param-description">
-                        <p>Extra angle to apply to the plane</p>
+                        <p>平面形状的额外角度</p>
 
                     </div>
 
@@ -1891,7 +1891,7 @@
     </div>
 
     <div class="description">
-        <p>Check if the bodies were in contact since the last reset().</p>
+        <p>检测从上一次reset()后刚体是否碰撞</p>
 
     </div>
 
@@ -1982,7 +1982,7 @@
     </div>
 
     <div class="description">
-        <p>Convex/capsule narrowphase</p>
+        <p>凸面与胶囊的细测</p>
 
     </div>
 
@@ -2126,7 +2126,7 @@
     </div>
 
     <div class="description">
-        <p>Convex/convex Narrowphase.See <a href="http://www.altdevblogaday.com/2011/05/13/contact-generation-between-3d-convex-meshes/">this article</a> for more info.</p>
+        <p>凸面与凸面的细测， 更多信息参考<a href="http://www.altdevblogaday.com/2011/05/13/contact-generation-between-3d-convex-meshes/">这篇文章</a> </p>
 
     </div>
 
@@ -2273,7 +2273,7 @@
     </div>
 
     <div class="description">
-        <p>Convex/line narrowphase</p>
+        <p>凸面与线形的细测</p>
 
     </div>
 
@@ -2412,7 +2412,7 @@
     </div>
 
     <div class="description">
-        <p>Creates a ContactEquation, either by reusing an existing object or creating a new one.</p>
+        <p>复用已有或创建一个碰撞方程</p>
 
     </div>
 
@@ -2488,7 +2488,7 @@
     </div>
 
     <div class="description">
-        <p>Creates a FrictionEquation, either by reusing an existing object or creating a new one.</p>
+        <p>复用已有或创建一个摩擦方程</p>
 
     </div>
 
@@ -2561,7 +2561,7 @@
     </div>
 
     <div class="description">
-        <p>Creates a FrictionEquation given the data in the ContactEquation. Uses same offset vectors ri and rj, but the tangent vector will be constructed from the collision normal.</p>
+        <p>从碰撞方程给出的数据中创建一个摩擦方程，使用同一个偏移向量ri和rj，但切向量将从碰撞法向量构造</p>
 
     </div>
 
@@ -2643,7 +2643,7 @@
     </div>
 
     <div class="description">
-        <p>Find a separating axis between the shapes, that maximizes the separating distance between them.</p>
+        <p>从形状间寻找分离轴，使得其分离距离最大化</p>
 
     </div>
 
@@ -2717,7 +2717,7 @@
 
 
                     <div class="param-description">
-                        <p>The resulting axis</p>
+                        <p>结果坐标</p>
 
                     </div>
 
@@ -2730,7 +2730,7 @@
 
             <div class="returns-description">
                         <span class="type">Boolean</span>:
-                    <p>Whether the axis could be found.</p>
+                    <p>该坐标是否可寻</p>
 
             </div>
         </div>
@@ -2779,7 +2779,7 @@
     </div>
 
     <div class="description">
-        <p>Get the edge that has a normal closest to an axis.</p>
+        <p>得到一个与轴线最接近的边缘</p>
 
     </div>
 
@@ -2835,7 +2835,7 @@
 
             <div class="returns-description">
                         <span class="type">Number</span>:
-                    <p>Index of the edge that is closest. This index and the next spans the resulting edge. Returns -1 if failed.</p>
+                    <p>最接近边的索引值，这个索引值和其下一个值跨过结果边缘，如果失败则返回-1</p>
 
             </div>
         </div>
@@ -2895,7 +2895,7 @@
     </div>
 
     <div class="description">
-        <p>Line/box narrowphase</p>
+        <p>线条和矩形的细测</p>
 
     </div>
 
@@ -3049,7 +3049,7 @@
     </div>
 
     <div class="description">
-        <p>Capsule/line narrowphase</p>
+        <p>胶囊与线形的细测</p>
 
     </div>
 
@@ -3193,7 +3193,7 @@
     </div>
 
     <div class="description">
-        <p>Line/line narrowphase</p>
+        <p>线与线的细测</p>
 
     </div>
 
@@ -3340,7 +3340,7 @@
     </div>
 
     <div class="description">
-        <p>Particle/convex Narrowphase</p>
+        <p>粒子与凸面的细测</p>
 
     </div>
 
@@ -3497,7 +3497,7 @@
     </div>
 
     <div class="description">
-        <p>Narrowphase for particle vs plane</p>
+        <p>粒子与平面的细测</p>
 
     </div>
 
@@ -3810,7 +3810,7 @@
     </div>
 
     <div class="description">
-        <p>Plane/Convex Narrowphase</p>
+        <p>平面与凸面的细测</p>
 
     </div>
 
@@ -3964,7 +3964,7 @@
     </div>
 
     <div class="description">
-        <p>Plane/line Narrowphase</p>
+        <p>平面与线形的细测</p>
 
     </div>
 
@@ -4100,7 +4100,7 @@
     </div>
 
     <div class="description">
-        <p>Project a Convex onto a world-oriented axis</p>
+        <p>投影到面向世界的轴上</p>
 
     </div>
 
@@ -4187,7 +4187,7 @@
     </div>
 
     <div class="description">
-        <p>Throws away the old equations and gets ready to create new</p>
+        <p>弃用旧方程</p>
 
     </div>
 
@@ -4244,7 +4244,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Keeps track of the allocated ContactEquations.</p>
+                            <p>跟踪所有分配的碰撞方程</p>
                     
                         </div>
                     
@@ -4304,7 +4304,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Contact skin size value to use in the next contact equations.</p>
+                            <p>用于下一碰撞方程的皮肤尺寸值</p>
                     
                         </div>
                     
@@ -4330,7 +4330,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Whether to make equations enabled in upcoming contacts.</p>
+                            <p>是否在下一次碰撞中启用方程</p>
                     
                         </div>
                     
@@ -4355,7 +4355,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Whether to make friction equations in the upcoming contacts.</p>
+                            <p>是否在下一次碰撞中启用摩擦方程</p>
                     
                         </div>
                     
@@ -4382,7 +4382,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Enable reduction of friction equations. If disabled, a box on a plane will generate 2 contact equations and 2 friction equations. If enabled, there will be only one friction equation. Same kind of simplifications are made  for all collision types.</p>
+                            <p>启用摩擦方程简化，如果禁用了，平面上的盒子将产生两个碰撞方程和两个摩擦方程，如果启用了，将只产生一个方程。简化对所有碰撞的形状都适用</p>
                     
                         </div>
                     
@@ -4408,7 +4408,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The friction value to use in the upcoming friction equations.</p>
+                            <p>用于下一摩擦方程的摩擦值</p>
                     
                         </div>
                     
@@ -4433,7 +4433,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Keeps track of the allocated ContactEquations.</p>
+                            <p>跟踪所有分配的摩擦方程</p>
                     
                         </div>
                     
@@ -4482,7 +4482,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The relaxation value to use in the next friction equations.</p>
+                            <p>用于下一摩擦方程的弛豫度</p>
                     
                         </div>
                     
@@ -4507,7 +4507,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The stiffness value to use in the next friction equations.</p>
+                            <p>用于下一摩擦方程的刚度</p>
                     
                         </div>
                     
@@ -4532,7 +4532,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The restitution value to use in the next contact equations.</p>
+                            <p>用于下一碰撞方程的弹性</p>
                     
                         </div>
                     
@@ -4557,7 +4557,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The friction slip force to use when creating friction equations.</p>
+                            <p>用于创建摩擦方程的摩擦偏移力</p>
                     
                         </div>
                     
@@ -4582,7 +4582,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The stiffness value to use in the next contact equations.</p>
+                            <p>用于下一碰撞方程的刚度</p>
                     
                         </div>
                     
@@ -4607,7 +4607,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The stiffness value to use in the next contact equations.</p>
+                            <p>用于下一碰撞方程的刚度</p>
                     
                         </div>
                     
@@ -4632,7 +4632,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Will be the .relativeVelocity in each produced FrictionEquation.</p>
+                            <p>将会成为每个产生的摩擦方程的.relativeVelocity属性</p>
                     
                         </div>
                     
