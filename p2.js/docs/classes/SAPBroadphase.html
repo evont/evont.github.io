@@ -140,7 +140,7 @@
 
 
 <div class="box intro">
-    <p>Sweep and prune broadphase along one axis.</p>
+    <p>沿着一条轴修整粗侧</p>
 
 </div>
 
@@ -292,7 +292,7 @@
     </div>
 
     <div class="description">
-        <p>Returns all the bodies within an AABB.</p>
+        <p>返回包围盒中的所有刚体</p>
 
     </div>
 
@@ -326,7 +326,7 @@
 
 
                     <div class="param-description">
-                        <p>An array to store resulting bodies in.</p>
+                        <p>存储刚体的数组</p>
 
                     </div>
 
@@ -382,7 +382,7 @@
     </div>
 
     <div class="description">
-        <p>Check whether the bounding radius of two bodies overlap.</p>
+        <p>检测两个刚体的包围半径是否重叠</p>
 
     </div>
 
@@ -458,7 +458,7 @@
     </div>
 
     <div class="description">
-        <p>Check whether two bodies are allowed to collide at all.</p>
+        <p>检测两个刚体是否允许碰撞</p>
 
     </div>
 
@@ -534,7 +534,7 @@
     </div>
 
     <div class="description">
-        <p>Get the colliding pairs</p>
+        <p>获取碰撞对</p>
 
     </div>
 
@@ -720,7 +720,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The axis to sort along. 0 means x-axis and 1 y-axis. If your bodies are more spread out over the X axis, set axisIndex to 0, and you will gain some performance.</p>
+                            <p>用于排序的轴，0代表x 轴，1表示y 轴。如果刚体在x 轴上分布得更多，将axisIndex 设置为0会获得更好的性能表现</p>
                     
                         </div>
                     
@@ -745,7 +745,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>List of bodies currently in the broadphase.</p>
+                            <p>当前处在粗侧阶段的刚体列表</p>
                     
                         </div>
                     
@@ -770,7 +770,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The bounding volume type to use in the broadphase algorithms. Should be set to Broadphase.AABB or Broadphase.BOUNDING_CIRCLE.</p>
+                            <p>在包围盒算法中使用的包围盒类型，应被设置为 Broadphase.AABB 或 Broadphase.BOUNDING_CIRCLE</p>
                     
                         </div>
                     
@@ -795,7 +795,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The resulting overlapping pairs. Will be filled with results during .getCollisionPairs().</p>
+                            <p>产生的重叠对，在调用 .getCollisionPairs() 时被填充</p>
                     
                         </div>
                     
@@ -820,7 +820,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The world to search for collision pairs in. To change it, use .setWorld()</p>
+                            <p>设置搜索碰撞对的物理世界，使用.setWorld() 改变这一属性</p>
                     
                         </div>
                     
