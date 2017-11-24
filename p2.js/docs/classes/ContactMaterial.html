@@ -137,7 +137,7 @@
 
 
 <div class="box intro">
-    <p>Defines what happens when two materials meet, such as what friction coefficient to use. You can also set other things such as restitution, surface velocity and constraint 参数.</p>
+    <p>定义两种材质相遇时发生的事情，如使用的摩擦系数。还可以设置其他如弹性，表面速度和约束等参数.</p>
 
 </div>
 
@@ -222,7 +222,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Friction coefficient.</p>
+                                            <p>摩擦系数</p>
         
                                         </div>
         
@@ -233,7 +233,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Restitution coefficient aka &quot;bounciness&quot;.</p>
+                                            <p>恢复系数又名“弹性”</p>
         
                                         </div>
         
@@ -244,7 +244,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>ContactEquation stiffness.</p>
+                                            <p>接触方程刚度</p>
         
                                         </div>
         
@@ -255,7 +255,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>ContactEquation relaxation.</p>
+                                            <p>接触方程弛豫度</p>
         
                                         </div>
         
@@ -266,7 +266,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>FrictionEquation stiffness.</p>
+                                            <p>摩擦方程刚度</p>
         
                                         </div>
         
@@ -277,7 +277,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>FrictionEquation relaxation.</p>
+                                            <p>摩擦方程弛豫度</p>
         
                                         </div>
         
@@ -288,7 +288,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Surface velocity.</p>
+                                            <p>表面速度</p>
         
                                         </div>
         
@@ -391,7 +391,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Offset to be set on ContactEquations. A positive value will make the bodies penetrate more into each other. Can be useful in scenes where contacts need to be more persistent, for example when stacking. Aka &quot;cure for nervous contacts&quot;.</p>
+                            <p>在接触方程上设置的偏移量。正数将使得刚体之间更多的穿透彼此，在例如堆叠之类的碰撞需要更持久的情景下很有用</p>
                     
                         </div>
                     
@@ -416,7 +416,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Friction coefficient to use in the contact of these two materials. Friction = 0 will make the involved objects super slippery, and friction = 1 will make it much less slippery. A friction coefficient larger than 1 will allow for very large friction forces, which can be convenient for preventing car tires not slip on the ground.</p>
+                            <p>两种材质之间的摩擦系数，为0 时将使得物体十分光滑，为1时将不那么光滑。大于1时将产生一个可以方便地组织汽车轮胎不在地面上打滑的很大的摩擦力</p>
                     
                         </div>
                     
@@ -442,7 +442,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Relaxation of the resulting friction force. The default value should be good for most simulations. Default value is <a href="Equation.html#property_DEFAULT_RELAXATION" class="crosslink">Equation.DEFAULT_RELAXATION</a>.</p>
+                            <p>产生的摩擦力的弛豫度，默认值是最适合用于模拟的，默认为<a href="Equation.html#property_DEFAULT_RELAXATION" class="crosslink">Equation.DEFAULT_RELAXATION</a>.</p>
                     
                         </div>
                     
@@ -467,7 +467,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Stiffness of the resulting friction force. For most cases, the value of this property should be a large number. I cannot think of any case where you would want less frictionStiffness. Default value is <a href="Equation.html#property_DEFAULT_STIFFNESS" class="crosslink">Equation.DEFAULT_STIFFNESS</a>.</p>
+                            <p>产生的摩擦力的刚度. 在大多数情况下，这个属性值应为一个很大的数字，我不认为有哪种情况你会想用更小的摩擦力刚度，默认为<a href="Equation.html#property_DEFAULT_STIFFNESS" class="crosslink">Equation.DEFAULT_STIFFNESS</a>.</p>
                     
                         </div>
                     
@@ -492,7 +492,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>The contact material identifier</p>
+                            <p>接触材质的唯一标志</p>
                     
                         </div>
                     
@@ -517,7 +517,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>First material participating in the contact material</p>
+                            <p>参与接触的第一种材质</p>
                     
                         </div>
                     
@@ -542,7 +542,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Second material participating in the contact material</p>
+                            <p>参与接触的第二种材质</p>
                     
                         </div>
                     
@@ -567,7 +567,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Relaxation of the resulting ContactEquation that this ContactMaterial generate. Default value is <a href="Equation.html#property_DEFAULT_RELAXATION" class="crosslink">Equation.DEFAULT_RELAXATION</a>.</p>
+                            <p>这个碰撞材质生成的接触方程的弛豫度，默认为<a href="Equation.html#property_DEFAULT_RELAXATION" class="crosslink">Equation.DEFAULT_RELAXATION</a>.</p>
                     
                         </div>
                     
@@ -592,7 +592,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Restitution, or &quot;bounciness&quot; to use in the contact of these two materials. A restitution of 0 will make no bounce, while restitution=1 will approximately bounce back with the same velocity the object came with.</p>
+                            <p>两种材质接触时的弹性. 为0 时将不会产生反弹，而为1 时将以同样的速度将对象反方向弹回</p>
                     
                         </div>
                     
@@ -618,7 +618,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Hardness of the contact. Less stiffness will make the objects penetrate more, and will make the contact act more like a spring than a contact force. Default value is <a href="Equation.html#property_DEFAULT_STIFFNESS" class="crosslink">Equation.DEFAULT_STIFFNESS</a>.</p>
+                            <p>接触硬度，越小的硬度使得物体的穿透力越小，也使得碰撞表现得更像弹簧而不是碰撞，默认为<a href="Equation.html#property_DEFAULT_STIFFNESS" class="crosslink">Equation.DEFAULT_STIFFNESS</a>.</p>
                     
                         </div>
                     
@@ -643,7 +643,7 @@
                         </div>
                     
                         <div class="description">
-                            <p>Will add surface velocity to this material. If bodyA rests on top if bodyB, and the surface velocity is positive, bodyA will slide to the right.</p>
+                            <p>将增加材质表面速度，如果BodyA 停留在BodyB上面，同时表面速度为负数，BodyA 将向右滑动</p>
                     
                         </div>
                     
