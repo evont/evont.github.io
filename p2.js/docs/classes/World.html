@@ -140,7 +140,7 @@
 
 
 <div class="box intro">
-    <p>The dynamics world, where all bodies and constraints live.</p>
+    <p>刚体和约束所活动的动态世界</p>
 
 </div>
 
@@ -199,7 +199,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Defaults to GSSolver.</p>
+                                            <p>默认为 GSSolver.</p>
         
                                         </div>
         
@@ -210,7 +210,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Defaults to y=-9.78.</p>
+                                            <p>默认为 y=-9.78.</p>
         
                                         </div>
         
@@ -221,7 +221,7 @@
                                             <span class="flag optional" title="该参数是可选的">可选</span>
         
                                         <div class="param-description">
-                                            <p>Defaults to SAPBroadphase</p>
+                                            <p>默认为 SAPBroadphase</p>
         
                                         </div>
         
@@ -581,7 +581,7 @@
     </div>
 
     <div class="description">
-        <p>Add a body to the simulation</p>
+        <p>将一个刚体添加到模拟中</p>
 
     </div>
 
@@ -644,7 +644,7 @@ world.addBody(body);
     </div>
 
     <div class="description">
-        <p>Add a constraint to the simulation.</p>
+        <p>将一个约束添加到模拟中</p>
 
     </div>
 
@@ -706,7 +706,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Add a ContactMaterial to the simulation.</p>
+        <p>将一个碰撞材质添加到模拟中</p>
 
     </div>
 
@@ -759,7 +759,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Add a spring to the simulation</p>
+        <p>将一个弹簧添加到模拟中</p>
 
     </div>
 
@@ -806,7 +806,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Resets the World, removes all bodies, constraints and springs.</p>
+        <p>重启世界，移除所有刚体、约束和弹簧</p>
 
     </div>
 
@@ -846,7 +846,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Disable collision between two bodies</p>
+        <p>禁用两个刚体间的碰撞</p>
 
     </div>
 
@@ -988,7 +988,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Enable collisions between the given two bodies</p>
+        <p>启用两个刚体间的碰撞</p>
 
     </div>
 
@@ -1054,7 +1054,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Get a body by its id.</p>
+        <p>根据id获取刚体</p>
 
     </div>
 
@@ -1080,7 +1080,7 @@ world.addConstraint(constraint);
 
             <div class="returns-description">
                         <span class="type"><a href="Body.html" class="crosslink">Body</a></span>:
-                    <p>The body, or false if it was not found.</p>
+                    <p>找到的刚体，如果没找到返回false</p>
 
             </div>
         </div>
@@ -1122,7 +1122,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Get a contact material given two materials</p>
+        <p>返回两个材质的碰撞材质</p>
 
     </div>
 
@@ -1158,7 +1158,7 @@ world.addConstraint(constraint);
 
             <div class="returns-description">
                         <span class="type"><a href="ContactMaterial.html" class="crosslink">ContactMaterial</a></span>:
-                    <p>The matching ContactMaterial, or false on fail.</p>
+                    <p>匹配的碰撞材质，如果失败返回false</p>
 
             </div>
         </div>
@@ -1279,7 +1279,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Test if a world point overlaps bodies</p>
+        <p>检测是否该点与刚体重合</p>
 
     </div>
 
@@ -1293,7 +1293,7 @@ world.addConstraint(constraint);
 
 
                     <div class="param-description">
-                        <p>Point to use for intersection tests</p>
+                        <p>用于检测重合的点</p>
 
                     </div>
 
@@ -1304,7 +1304,7 @@ world.addConstraint(constraint);
 
 
                     <div class="param-description">
-                        <p>A list of objects to check for intersection</p>
+                        <p>用于检测重合的刚体列表</p>
 
                     </div>
 
@@ -1315,7 +1315,7 @@ world.addConstraint(constraint);
 
 
                     <div class="param-description">
-                        <p>Used for matching against particles and lines. Adds some margin to these infinitesimal objects.</p>
+                        <p>用于匹配粒子和线，添加一些边距在这些无穷小的物体上</p>
 
                     </div>
 
@@ -1328,7 +1328,7 @@ world.addConstraint(constraint);
 
             <div class="returns-description">
                         <span class="type">Array</span>:
-                    <p>Array of bodies that overlap the point</p>
+                    <p>与该点碰撞的所有刚体</p>
 
             </div>
         </div>
@@ -1580,7 +1580,7 @@ world.addConstraint(constraint);
     </div>
 
     <div class="description">
-        <p>Ray cast against all bodies in the world.</p>
+        <p>物理世界中被射线投射到的所有刚体</p>
 
     </div>
 
@@ -1616,7 +1616,7 @@ world.addConstraint(constraint);
 
             <div class="returns-description">
                         <span class="type">Boolean</span>:
-                    <p>True if any body was hit.</p>
+                    <p>如果刚体被击中则为true</p>
 
             </div>
         </div>
@@ -1691,7 +1691,7 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Remove a body from the simulation. If this method is called during step(), the body removal is scheduled to after the step.</p>
+        <p>从模拟中移除所有刚体，如果该方法在step()中被调用，刚体的移除将在步进后调用</p>
 
     </div>
 
@@ -1744,7 +1744,7 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Removes a constraint</p>
+        <p>移除一个约束</p>
 
     </div>
 
@@ -1797,7 +1797,7 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Removes a contact material</p>
+        <p>移除一个碰撞材质</p>
 
     </div>
 
@@ -1850,7 +1850,7 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Remove a spring</p>
+        <p>移除一个弹簧</p>
 
     </div>
 
@@ -1930,7 +1930,7 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Runs narrowphase for the shape pair i and j.</p>
+        <p>为形状i 和 j执行细测.</p>
 
     </div>
 
@@ -2073,7 +2073,7 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Set the relaxation for all equations and contact materials.</p>
+        <p>为所有方程和碰撞材质设置弛豫度</p>
 
     </div>
 
@@ -2126,7 +2126,7 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Set the stiffness for all equations and contact materials.</p>
+        <p>为所有方程和碰撞材质设置刚度</p>
 
     </div>
 
@@ -2185,8 +2185,8 @@ world.raycast(result, ray);
     </div>
 
     <div class="description">
-        <p>Step the physics world forward in time.</p>
-<p>There are two modes. The simple mode is fixed timestepping without interpolation. In this case you only use the first argument. The second case uses interpolation. In that you also provide the time since the function was last used, as well as the maximum fixed timesteps to take.</p>
+        <p>沿着时间推进世界</p>
+<p>有两种模式，简单的模式是不插值的固定步进，在这种情况下你只使用第一个参数。第二种情况用了插值，在这种情况下，你可以提供从上次调用函数到现在所花的时间，也可以提供最大步进数</p>
 
     </div>
 
@@ -2200,7 +2200,7 @@ world.raycast(result, ray);
 
 
                     <div class="param-description">
-                        <p>The fixed time step size to use.</p>
+                        <p>使用的固定步进</p>
 
                     </div>
 
@@ -2212,7 +2212,7 @@ world.raycast(result, ray);
 
 
                     <div class="param-description">
-                        <p>The time elapsed since the function was last called.</p>
+                        <p>上次调用函数以来所经过的时间</p>
 
                     </div>
 
@@ -2224,7 +2224,7 @@ world.raycast(result, ray);
 
 
                     <div class="param-description">
-                        <p>Maximum number of fixed steps to take per function call.</p>
+                        <p>每个函数调用占用的最大固定步长</p>
 
                     </div>
 
