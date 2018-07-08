@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>使用Vue.js 或React.js 开发时跨域的解决方案 | EvontGoh</title>
+  <title>Egret 游戏开发：投篮 | EvontGoh</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -79,9 +79,7 @@
                 <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/p2docs" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
-                    
-                        <li><a href="/vue" target="_BLANK" class="animsition-link">Vue</a></li>
+                        <li><a href="/p2.js/docs/" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
                     
                 </ul>
             </li>
@@ -155,48 +153,89 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-12-16T13:25:10.000Z" itemprop="datePublished">
-          2016-12-16
+      <time datetime="2017-11-18T08:26:38.000Z" itemprop="datePublished">
+          2017-11-18
       </time>
     
 </span>
-                <h1>使用Vue.js 或React.js 开发时跨域的解决方案</h1>
+                <h1>Egret 游戏开发：投篮</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>在使用Vue.js (vue-cli 创建本地项目开发) 或者React.js （create-react-app 创建本地项目开发）的时候，我们通常会遇到下面这样的跨域问题</p>
-<p><img src="/img/50ADA248-088F-417D-A896-D70FE790F8A6.png" alt="跨域请求失败示例">;</p>
-<p>那么，怎么解决这个问题呢？</p>
-<h3 id="Vue-js-解决方案"><a href="#Vue-js-解决方案" class="headerlink" title="Vue.js 解决方案"></a>Vue.js 解决方案</h3><ol>
-<li>在项目根目录下搜索config 目录，找到index.js 文件<br><img src="/img/3129CE0C-FC05-49C7-A56D-F495FE73452E.png" alt="index.js 文件">;</li>
-<li><p>更改proxyTable 配置<br>ProxyTable 这个参数是一个地址映射表，如图，第一个键值为代理后的路径， target 则为要请求的url，按照如下设置，则可将所有对 <code>http://baobab.kaiyanapp.com/api/v4</code> 的请求代理到 <code>/api</code> 这个 路径上，请求的时候只需要请求类似 <code>/api／tabs/selected</code> 的url，webpack就会自动将请求转发到 <code>http://baobab.kaiyanapp.com/api/v4/tabs/selected</code> 下；如果本身的请求接口存在前缀 <code>/api</code> ，则需在 <code>pathRewrite</code> 中将 <code>&#39;^/api&#39;</code> 转为 <code>&#39;/&#39;</code> 或者 <code>&#39;&#39;</code>；<br>而至于跨域问题，我们可以在这个参数中加上 <code>changeOrigin</code> 参数，这个参数接收一个boolean 值，将其设置为true，那么本地则会代理请求，这样就解决了跨域问题；<br><img src="/img/92A8B71F-306A-4199-A150-5FE64371F0B4.png" alt="更改Proxy">;</p>
-<p>文档参考 <a href="https://vuejs-templates.github.io/webpack/proxy.html" title="Vuejs webpack配置文档" target="_blank" rel="external">Vuejs webpack Proxy配置文档</a><br>Vue 使用的http-proxy-middleware 插件地址为 ： <a href="https://github.com/chimurai/http-proxy-middleware" target="_blank" rel="external">https://github.com/chimurai/http-proxy-middleware</a>；</p>
+      		<p>前段时间为了推广一个新的公众号，开发了一款名为「投篮达人」（已下线）的小游戏，发布上线之后得到了不错的效果，成功为公众号吸引了很多粉丝。下面就来跟大家分享下开发这款游戏的历程。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>游戏本身其实很简单，只是一个投篮游戏，实现篮球的投射，篮筐运动，篮球与篮筐撞击，游戏结束后的排行榜记录以及公众号的识别。但由于游戏是2D游戏，却有一个仿3D效果（篮球投出后离我们越来越远以及穿透篮网），同时要让篮球与篮筐进行碰撞检测且模拟一个流畅自然的反弹效果，所以需要不断填坑。</p>
+<h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p>考虑到开发速度，找一个成熟且文档齐全的HTML5 游戏开发引擎就十分重要了，在国内大多数人用的都是Cocos2d-x-js 或Egret，phaser 或 Hilo 这些缺乏比较顺手的开发工具就跳过了，Cocos 在网页上的性能不太理想，所以最后选择了Egret 2D</p>
+<p>至于物理引擎方面，Egret 是推荐使用P2 引擎的，因为其性能相较于Box 2D 或者Matter.js 都好，不过缺点是缺乏中文文档，目前我也在进行翻译中，地址戳 👉 <a href="https://evont.gitbooks.io/p2/content/" target="_blank" rel="external">P2 中文文档</a> </p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><ul>
+<li><p><strong>伪3D 运动</strong>    </p>
+<ol>
+<li><p>近大远小的显示</p>
+<p><img src="/images/egret-shoot-pers.png" alt=""></p>
+<p>以篮球初始位置（或底部）为原点确立一个视觉焦点，在篮球运动的过程中根据篮球在Y轴上的位置计算其缩放比例，计算公式如下：</p>
+<p><code>scale = (curY - startY) / ( endY - startY);</code></p>
+<p>​</p>
+<p>另外，在物理世界中，任何刚体都是形状和大小都保持不变的物理模型，也就意味着，我们能让篮球的贴图的缩放，但无法让篮球的刚体进行缩放。为了让篮球和篮筐撞击时，篮球的大小是准确的，我们可以根据上图的缩放比例公式，计算篮球抵达篮筐（篮筐位置确定，比例必然是固定的）时的比例，在初始位置让篮球的贴图和刚体大小保持这一比例，当篮球运动到篮筐时大小就正好是其刚体的实际大小。</p>
+<p><img src="/images/egret-shoot-scale.png" alt="缩放示意图"></p>
+</li>
+<li><p>篮球与篮筐的交互</p>
+<p>由于篮球上升时，在2D 的物理世界中，篮球和篮筐实际上是同一平面，球和篮筐的刚体默认会产生碰撞，同时，篮球的纵深需要在上升时大于篮筐而下落时小于篮筐；</p>
+<p>为了解决第一个问题，可以利用P2 提供的碰撞分组来避免碰撞。</p>
+<p>在P2 中，刚体需要一个或多个Shape 决定刚体的外形，而Shape 又具有collisionGroup 和 collisionMask 两个属性，前者决定了Shape 的碰撞分组，后者决定了Shape 会与哪些碰撞分组发生碰撞。需要注意的是，collisionGroup 的取值是 Math.pow(2,0) 到 Math.pow(2,32)， 具体参考(<a href="https://schteppe.github.io/p2.js/docs/classes/Shape.html#property_collisionGroup" target="_blank" rel="external">Shape 的碰撞分组</a>)；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 创建篮球刚体的形状</span></div><div class="line">ballShape = <span class="keyword">new</span> p2.Circle(&#123;<span class="attr">radius</span>: GlobalData.ballRadius / factor&#125;); </div><div class="line"><span class="comment">// 设置篮球的碰撞分组</span></div><div class="line">ballShape.collisionGroup = <span class="keyword">this</span>.FLYBALL;</div><div class="line"><span class="comment">// 这样设置 collisionMask 篮球就能与篮筐交互，注意多个分组分隔的是 | 不是 ||</span></div><div class="line">ballShape.collisionMask = <span class="keyword">this</span>.BASKET | <span class="keyword">this</span>.GROUND;</div></pre></td></tr></table></figure>
+<p>因此，在篮球上升时，设置其碰撞分组为FLYBALL，其collisionMask 为地面，此时篮球只会和地面碰撞，不与篮筐碰撞，当下落时，将其分组设置为DROPBALL，collisionMask 为地面和篮筐，此时篮球就会和篮筐发生碰撞了。</p>
+<p>为了解决第二个问题，思路类似，上升时将篮球的上升设置最高，下落时与篮筐交换纵深值即可；</p>
 </li>
 </ol>
-<h3 id="React-js-解决方案"><a href="#React-js-解决方案" class="headerlink" title="React.js 解决方案"></a>React.js 解决方案</h3><ol>
-<li><p>由于create-react-app 的目标是简介的开发者体验，因此使用create-react-app 创建的项目中是看不到webpack 等的配置项的，因此我们需要先执行eject</p>
-<pre><code>npm run eject</code></pre>
-或者
-<pre><code>yarn run eject</code></pre>
-
-<p>这个命令将所有的配置文件及package.json 依赖库解压暴露到应用所在路径，一旦执行则不可回退（真不知道这样的设计有什么意义。。。。）;</p>
 </li>
-<li>在项目根目录下搜索scripts 目录，找到start.js 文件<br><img src="/img/9F534441-789F-443D-A8A4-0AB0E42B2FE2.png" alt="start.js 文件">;</li>
-<li>加入如下代码<br><pre><code>proxy:{<br> “/api” : {<br>   target: “<a href="http://xxx.com/" target="_blank" rel="external">http://xxx.com/</a>“,<br>   secure: false,<br>   changeOrigin : true<br> }<br>}</code></pre><br>这一配置与Vue.js 的ProxyTable 配置很类似，同样是将请求代理到target 所指向的url 上进行请求转发</li>
+</ul>
+<ul>
+<li><p><strong>二维码识别</strong></p>
+<p>在微信网页中，经常需要提供长按二维码识别功能，但二维码需要是一张实际的图片，内嵌于Canvas 的二维码是不支持长按识别的，为了让微信能够识别到图片，只需要在Canvas 上面覆盖一张图片即可。示意图如下：</p>
+<p><img src="/images/egret-shoot-qrcode.png" alt="覆盖层级示意图"></p>
+<p>在设置图片时，大小尺寸需要根据浏览器尺寸和Canvas 的实际尺寸进行计算缩放，才能让图片看起来像是和Canvas 一起的；</p>
+</li>
+<li><p><strong>文字复制</strong></p>
+<p>游戏需求中，需要用户点击按钮复制一段文字发送给公众号，但由于浏览器对文字复制的权限不一样，市面上的解决方案是使用<a href="https://github.com/zeroclipboard/ZeroClipboard" target="_blank" rel="external">ZeroClipBoard</a>， 但开发时没考虑到，使用的是 document.execCommand(‘copy’)，而由于兼容性，进行了fallback，当浏览器不支持时提示用户长按选择文字进行复制，这时也由于Canvas 不支持文字选择，需要将文字跟二维码一样处理，放置于Canvas 之上；</p>
+</li>
+</ul>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><ul>
+<li><p><strong>渲染优化</strong></p>
+<p>Egret每刷新一帧的时候，会执行四步操作。在制作游戏的时候应该清晰的记住四步操作都在干什么。</p>
+<ol>
+<li>我们执行了一次EnterFrame，此时，引擎会执行游戏中的逻辑。并且抛 EnterFrame事件。</li>
+<li>执行一个clear。将上一帧的画面全部擦除。</li>
+<li>Egret内核会遍历你游戏场景中的所有DisplayObject，并重新计算所有显示对象的transform</li>
+<li>如果你接触过canvas，那么你了解，这一步会将所有的图像全部draw到画布中。</li>
 </ol>
+<p><img src="/images/egret-shoot-render.png" alt="渲染示意图"></p>
+<p>了解了Egret 的渲染机制之后，我们就知道该从哪里下手了。</p>
+<p>首先，由于每次都要遍历DisplayObject， 对于不可见的对象都要进行清除，而创建对象也需要花费性能开销，所以我们可以创建回收池对不可见的对象进行回收，这样就可以减小一部分开销；</p>
+<p>其次，Canvas 检测触摸点的方式是遍历所有点来检测点击的是哪个点，我们设置Touch 层的时候，尽可能的往上挪，而不是设置在对象上，这样就可以减少遍历所产生的开销。</p>
+<p>另外在游戏开发过程中我手头只有iOS 设备，而测试过程时发现在安卓机上存在掉帧严重的现象；在将画布尺寸从640 <em> 1136 缩小至480 </em> 800 后，卡顿状况明显好转，猜测是由于画布太多会造成渲染的开销也变大，所以可以将画布在可接受范围内设置小一些，由浏览器缩放画布，从而减少渲染开销。</p>
+</li>
+<li><p><strong>脏矩形渲染</strong></p>
+<p>对于复杂UI界面的情况，全屏刷新算法会每秒60次不停地刷新所有UI对象，脏矩形渲染能够检测改变的对象，只渲染改变的对象。在有脏矩形渲染的情况下，哪改变绘制哪，极端情况直接跳过绘制，在复杂UI界面的情况非常容易达到满帧。</p>
+<p>Egret 默认开启了脏矩形渲染，但当所有显示对象都在不停的动，那这种情况下性能反而不好。此时我们需要通过关闭脏矩形渲染</p>
+<p><code>this.stage.dirtyRegionPolicy = &quot;off&quot;;</code></p>
+</li>
+<li><p><strong>WebGL渲染</strong> </p>
+<p>WebGL 通过增加 OpenGL ES 2.0 的一个 JavaScript 绑定，可以为 HTML5 Canvas 提供硬件 3D 加速渲染。 Egret Engine2D 提供了 WebGL 渲染模式。只需开启 WebGL 渲染，就能获得硬件加速。</p>
+<p>Egret 在开启 WebGL 渲染模式下，如果浏览器不支持将自动切换到Canvas 渲染模式下。</p>
+</li>
+</ul>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/07/19/建立前端错误监控系统/" style="float: left;">
-        ← 建立前端错误监控系统
+    <a class="pull-left" href="/2018/07/08/基于Koa-js的微信工具类小记/" style="float: left;">
+        ← 基于Koa.js的微信工具类小记
     </a>
     
     
-    <a class="pull-right" href="/2016/07/12/rnsucks/">
-        React Native 踩坑大全（持续更新） →
+    <a class="pull-right" href="/2017/10/09/建立前端错误监控系统/">
+        建立前端错误监控系统 →
     </a>
     
 </nav>

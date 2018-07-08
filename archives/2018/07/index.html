@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>React Native 踩坑大全（持续更新） | EvontGoh</title>
+  <title>Archives: 2018/7 | EvontGoh</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -79,9 +79,7 @@
                 <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/p2docs" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
-                    
-                        <li><a href="/vue" target="_BLANK" class="animsition-link">Vue</a></li>
+                        <li><a href="/p2.js/docs/" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
                     
                 </ul>
             </li>
@@ -149,119 +147,69 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2016-07-12T06:26:25.000Z" itemprop="datePublished">
-          2016-07-12
-      </time>
-    
-</span>
-                <h1>React Native 踩坑大全（持续更新）</h1>
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>Be the change you want to see in the world.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>欲变世界 先变其身</p>
+                        
+
+                    </div>
+                </div>
             </div>
+            <!-- // .col-md-12 -->
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<ul>
-<li><p><strong>React 部分</strong></p>
-<ol>
-<li><p>使用react-navigation 出现 <code>Unable to resolve module &#39;react/lib/ReactComponentWithPureRenderMixin&#39;</code>的问题<br>解决办法： 在package.json 中，将navigation 的配置修改为</p>
-<pre><code>"React-navigation": "Git+https://github.com/react-community/react-navigation.git#7edd9a7" </code></pre>
-然后执行
-<pre><code>rm -rf node_modules && npm instal
-rm -rf android/build && rm -rf ios/build</code></pre>
-</li>
-<li><p>使用真机测试时，摇晃手机无法弹出dev menu<br>解决办法： 安卓手机需要开启悬浮窗权限</p>
-</li>
-<li><p>连接手机进行调试时，使用 <code>adb devices</code> 看不到已连接设备<br>解决办法： 理论上是因为使用了小米手机， 进入设置 ➡️ 开发者选项 ➡️ 将<code>启用miui 优化</code> 选项关闭即可，如果不是，请确定手机已正确连上电脑</p>
-</li>
-<li><p>使用class 调用函数时找不到函数<br>解决办法：</p>
-<ul>
-<li>在constructor 中为所有定义的方法绑定 this，如 <code>this.XXX = this.XXX.bind(this)</code>，缺点是 <strong>每定义一个函数都要去绑定一次，十分麻烦</strong>;</li>
-<li>在调用的时候绑定 this， 如 <code>onPress = {this.XXX.bind(this)}</code>，缺点是 <strong>调用同一个函数也要绑定一次this</strong>;</li>
-<li>使用箭头函数，如<code>onPress = {()=&gt; this.XXX()}</code>，这种方法很简洁，也解决了this指向问题，但缺点是 <strong>()=&gt; 每次都会产生新函数导致不必要的性能开销</strong>;</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p><strong>Android 部分</strong></p>
-<ol>
-<li><p><code>License for package XXX not accepted.</code><br>解决办法：</p>
-<pre><code>mkdir "%ANDROID_HOME%\licenses"
-
-echo |set /p="8933bad161af4178b1185d1a37fbf41ea5269c55" > "%ANDROID_HOME%\licenses\android-sdk-license"</code></pre>
-</li>
-<li><p>使用本地模拟器如天天模拟器等，无法连接的问题<br>解决办法： 在启动模拟器后，根据模拟器的端口号，在命令行中执行：<pre><code>adb connect 127.0.0.1:模拟器端口</code></pre><br>端口号参考：</p>
-<ul>
-<li>天天模拟器: 6555</li>
-<li>夜神模拟器：62001</li>
-<li>蓝叠模拟器： 8700</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>iOS 部分</strong></p>
-<ol>
-<li><p>http 请求失败的问题<br>在iOS 9 或以上版本，新增了App Transport Security（简称ATS）特性，强制所有http 协议都使用https 协议进行传输，因此，如果服务器为http 的情况下，则需在info.plist 中找到 <code>App Transport Security Settings</code> 进行如下设置：</p>
-<ul>
-<li>在<code>Exception Domains</code> 中加入服务器域名，注意类型应为 <code>Dictionary</code> ；</li>
-<li>在该字典中添加 <code>NSExceptionAllowInsecureHTTPLoads</code> 字段，类型设置为 Boolean， 值为YES<br><img src="/img/16D702C344730AF12F5AC8093182D750.png" alt="info.plist 设置">;</li>
-</ul>
-</li>
-<li><p><code>Image source size {60, 40} does not match loaded image size {30, 20}</code><br>假设图片资源名字为xxx.png，则 <strong>xxx@2x.png</strong> 不是xxx.png 的两倍分辨率或者 <strong>xxx@3x.png</strong> 不是xxx.png 的三倍分辨率，修改图片分辨率后解决；</p>
-</li>
-</ol>
-</li>
-</ul>
-
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2016/12/16/Vue-js-下解决跨域的方案/" style="float: left;">
-        ← 使用Vue.js 或React.js 开发时跨域的解决方案
-    </a>
-    
-    
-</nav>
-
-        <div class="duoshuo">
-
-
-</div>
+        <div class="herofade beige-dk"></div>
     </div>
 </section>
-<! -- 添加捐赠图标 -->
-    <div class ="post-donate">
-      <div id="donate_board" class="center">
-        <span class="donate_txt">
-           Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！         
-        </span>
-        <br>
-      </div>  
-  
-    <!-- 支付宝打赏图案 -->
-      <div id="donate_guide" class="donate_bar center">
-          <a href="/img/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0">
-          <img src="/img/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
-          </a> 
-      </div>
 
-    <!-- 微信打赏图案 -->
-      <div id="donate_guide" class="donate_bar center">
-          <a href="/img/wepay.png" title="微信打赏" class="fancybox" rel="article0"  >
-          <img src="/img/wepay.png" title="微信打赏" height="164px" width="164px">
-          </a> 
-      </div>
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
+<!-- ============================ END Hero Image =========================== -->
+
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2018/07/08/基于Koa-js的微信工具类小记/">基于Koa.js的微信工具类小记</a></h4>
+                            
+                            <p><time datetime="2018-07-07T23:12:41.693Z"><a href="/2018/07/08/基于Koa-js的微信工具类小记/">2018-07-08</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
+        </div>
     </div>
-<! -- 添加捐赠图标 -->
+</section> 
 
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p></p>
+        </div>
+    </div>
+</section>
       
 <!-- ============================ Footer =========================== -->
 

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>基于Koa.js的微信工具类小记 | EvontGoh</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="EvontGoh">
+    <meta name="author" content="EvontNg">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="EvontGoh" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/p2.js/docs/" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">EvontGoh</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-07-07T23:12:41.693Z" itemprop="datePublished">
+          2018-07-08
+      </time>
+    
+</span>
+                <h1>基于Koa.js的微信工具类小记</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>关于微信公众号开发和小程序开发的教程其实网上已经有很多了，但是基于koa.js 开发的教程其实不多，于是接下来对踩坑的经历做一些小结；</p>
+<p>自己也写了一个微信工具类，项目地址是<a href="https://github.com/evont/koa-wechat" target="_blank" rel="external">微信工具类</a></p>
+<hr>
+<p>目录结构</p>
+<ul>
+<li><p><a href="#web">1. 微信网页js-sdk</a></p>
+<ul>
+<li><a href="#web_access">1.1. 获取Access_token</a></li>
+<li><a href="#web_api">1.2. 获取api_ticket</a></li>
+<li><a href="#web_signature">1.3. 获取signature</a></li>
+<li><a href="#web_validate">1.4. 注入权限验证配置</a></li>
+</ul>
+</li>
+<li><p><a href="#mini">2. 小程序获取用户openid</a></p>
+</li>
+</ul>
+<hr>
+  <h2 id="web">微信网页授权</h2>
+
+  <h4 id="web_access">1. 获取Access_token</h4><br>    access_token是公众号的全局唯一接口调用凭据，公众号调用各接口时都需使用access_token。开发者需要进行妥善保存。access_token的存储至少要保留512个字符空间。access_token的有效期目前为2个小时，需定时刷新，重复获取将导致上次获取的access_token失效。<br><br>  接口调用请求说明<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">`https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=<span class="subst">$&#123;appid&#125;</span>&amp;secret=<span class="subst">$&#123;appsecret&#125;</span>`</span></div></pre></td></tr></table></figure><br><br>  grant_type：授权类型，获取access_token填写client_credential<br><br>  appid：用户唯一凭证<br><br>  appsecret：用户唯一凭证密钥<br><br><br><br>  <h4 id="web_api">2. 获取api_ticket</h4><br>    生成签名之前必须先了解一下jsapi_ticket，jsapi_ticket是公众号用于调用微信JS接口的临时票据。正常情况下，jsapi_ticket的有效期为7200秒，通过access_token来获取。由于获取jsapi_ticket的api调用次数非常有限，频繁刷新jsapi_ticket会导致api调用受限，影响自身业务，开发者必须在自己的服务全局缓存jsapi_ticket 。<br><br>  接口调用请求说明<br>    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">`https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=<span class="subst">$&#123;accessToken&#125;</span>&amp;type=jsapi`</span></div></pre></td></tr></table></figure><br><br>    access_token：从上一步中获取或者缓存中未过期的access_token<br><br>    type：填写为jsapi<br><br>    <h4 id="web_signature">3. 获取signature</h4><br>    签名生成规则如下：参与签名的字段包括noncestr（随机字符串）, 有效的jsapi_ticket, timestamp（时间戳）, url（当前网页的URL，不包含#及其后面部分） 。对所有待签名参数按照字段名的ASCII 码从小到大排序（字典序）后，使用URL键值对的格式（即key1=value1&amp;key2=value2…）拼接成字符串string1。这里需要注意的是所有参数名均为小写字符。对string1作sha1加密，字段名和字段值都采用原始值，不进行URL 转义。<br><br>    1. noncestr 实现方式<br><br>    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">getNonceStr() &#123;</div><div class="line">  <span class="keyword">let</span> text = <span class="string">''</span>;</div><div class="line">  <span class="keyword">const</span> possible = <span class="string">'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'</span>;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i += <span class="number">1</span>) &#123;</div><div class="line">    text += possible.charAt(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * possible.length));</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> text;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br>    2. timestamp 实现方式<br><br>    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getTimestamp() &#123;</div><div class="line">  <span class="keyword">return</span> (<span class="string">`<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().valueOf()&#125;</span>`</span>).slice(<span class="number">0</span>, <span class="number">-3</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br>    3. 加密方式<br><br>    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> crypto = <span class="built_in">require</span>(<span class="string">'crypto'</span>);</div><div class="line"><span class="comment">// ...</span></div><div class="line">getSign(apiTicket, noncestr, timestamp, url) &#123;</div><div class="line">  <span class="keyword">const</span> sortData = <span class="string">`jsapi_ticket=<span class="subst">$&#123;apiTicket&#125;</span>&amp;noncestr=<span class="subst">$&#123;noncestr&#125;</span>&amp;timestamp=<span class="subst">$&#123;timestamp&#125;</span>&amp;url=<span class="subst">$&#123;url&#125;</span>`</span>;</div><div class="line">  <span class="keyword">return</span> crypto.createHash(<span class="string">'sha1'</span>).update(sortData).digest(<span class="string">'hex'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br>    <h4 id="web_validate">4. 注入权限验证配置</h4>
+
+<pre><code>一、 在需要调用JS接口的页面引入如下JS文件，（支持https）：
+[http://res.wx.qq.com/open/js/jweixin-1.2.0.js](http://res.wx.qq.com/open/js/jweixin-1.2.0.js)
+
+二、所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">  wx.config(&#123;</div><div class="line">    <span class="attr">debug</span>: <span class="literal">true</span>, <span class="comment">// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span></div><div class="line">    appId: <span class="string">''</span>, <span class="comment">// 必填，公众号的唯一标识</span></div><div class="line">    timestamp: , <span class="comment">// 必填，生成签名的时间戳</span></div><div class="line">    nonceStr: <span class="string">''</span>, <span class="comment">// 必填，生成签名的随机串</span></div><div class="line">    signature: <span class="string">''</span>,<span class="comment">// 必填，签名</span></div><div class="line">    jsApiList: [] <span class="comment">// 必填，需要使用的JS接口列表</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</code></pre><hr>
+  <h2 id="mini">小程序授权</h2>
+
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 一个存放小程序对应的appid 和secret的对象，这里可以实现为存放在数据，演示说明则简略</span></div><div class="line"><span class="keyword">const</span> miniGameMap = &#123;</div><div class="line">  <span class="attr">app</span>: &#123;</div><div class="line">    <span class="attr">appid</span>: <span class="string">'...'</span>,</div><div class="line">    <span class="attr">appsecret</span>: <span class="string">'...'</span>,</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">getMiniLoginData(code, appName) &#123;</div><div class="line">    <span class="keyword">const</span> appInfo = miniGameMap[appName];</div><div class="line">    <span class="keyword">let</span> result = &#123;</div><div class="line">      <span class="attr">errcode</span>: <span class="number">40029</span>,</div><div class="line">      <span class="attr">errMsg</span>: <span class="string">'无效的游戏信息'</span>,</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (appInfo) &#123;</div><div class="line">      <span class="keyword">const</span> miniappid = appInfo.appid;</div><div class="line">      <span class="keyword">const</span> miniappsecret = appInfo.appsecret;</div><div class="line">      <span class="keyword">const</span> reqUrl = <span class="string">`https://api.weixin.qq.com/sns/jscode2session?appid=<span class="subst">$&#123;miniappid&#125;</span>&amp;secret=<span class="subst">$&#123;miniappsecret&#125;</span>&amp;js_code=<span class="subst">$&#123;code&#125;</span>&amp;grant_type=authorization_code`</span>;</div><div class="line">      <span class="comment">// HttpClient 可以替换为自定义的请求库，不做限制</span></div><div class="line">      result = HttpClient.request(reqUrl).then(HttpClient.responseAdapter);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h3><p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115" target="_blank" rel="external">微信JS-SDK说明文档</a></p>
+<p><a href="https://mp.weixin.qq.com/debug/" target="_blank" rel="external">微信公众平台接口调试工具</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2017/11/18/游戏开发：投篮/">
+        Egret 游戏开发：投篮 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+<! -- 添加捐赠图标 -->
+    <div class ="post-donate">
+      <div id="donate_board" class="center">
+        <span class="donate_txt">
+           Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！         
+        </span>
+        <br>
+      </div>  
+  
+    <!-- 支付宝打赏图案 -->
+      <div id="donate_guide" class="donate_bar center">
+          <a href="/img/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0">
+          <img src="/img/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+          </a> 
+      </div>
+
+    <!-- 微信打赏图案 -->
+      <div id="donate_guide" class="donate_bar center">
+          <a href="/img/wepay.png" title="微信打赏" class="fancybox" rel="article0"  >
+          <img src="/img/wepay.png" title="微信打赏" height="164px" width="164px">
+          </a> 
+      </div>
+
+    </div>
+<! -- 添加捐赠图标 -->
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By EvontNg. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
