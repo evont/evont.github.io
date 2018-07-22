@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>微信小游戏开发小记 | Evolution &amp; Tech</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Evolution & Tech">
+    <meta name="author" content="EvontNg">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Evolution &amp; Tech" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/p2.js/docs/" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Evolution & Tech</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-07-22T14:12:38.344Z" itemprop="datePublished">
+          2018-07-22
+      </time>
+    
+</span>
+                <h1>微信小游戏开发小记</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近由于业务原因开始接触微信小游戏的开发，踩了一些坑。下面开始写一下关于遇到的一些问题以及解决方法的总结，</p>
+<hr>
+<h3 id="一、开放数据域绘制图片问题"><a href="#一、开放数据域绘制图片问题" class="headerlink" title="一、开放数据域绘制图片问题"></a>一、开放数据域绘制图片问题</h3><p>在DOM 环境中使用Canvans 绘制图片我们一般是使用如下的方式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.getElementById(<span class="string">'img'</span>);</div><div class="line">ctx.drawImage(img, <span class="number">10</span>, <span class="number">10</span>);</div><div class="line"><span class="string">``</span><span class="string">` </span></div><div class="line">drawImage 的第一个参数可以用HTMLImageElement，HTMLCanvasElement或者HTMLVideoElement作为参数，但是在开放数据域下不存在DOM 操作，我们需要使用如下的方式去</div><div class="line">`<span class="string">``</span>javascript</div><div class="line"><span class="keyword">let</span> pic = wx.createImage(); </div><div class="line">pic.src = url;</div><div class="line"><span class="comment">// 如果是网络图片，则需加载完成后绘制</span></div><div class="line"><span class="comment">// pic.onload = () =&gt; &#123;</span></div><div class="line">  ctx.drawImage(pic, <span class="number">10</span>, <span class="number">10</span>);</div><div class="line"><span class="comment">// &#125;</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="二、开放数据域性能问题"><a href="#二、开放数据域性能问题" class="headerlink" title="二、开放数据域性能问题"></a>二、开放数据域性能问题</h3><p>由于开放域不能向主域发送数据，传统上的思路是主域需要刷新ShareCanvas并绘制到主屏上，但这样就会导致性能上的开销过大，仅仅用来绘制排行榜的话是十分不明智的做法，Egret 有一个脏渲染的概念，如果页面没有“脏”，即是没有变化的元素，则不会重新渲染Canvans ，从而减少了重绘次数，优化了渲染性能，具体的实现思路如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> requestAnimationFrameID; <span class="comment">// 记录requestAnimationFrame的ID</span></div><div class="line"><span class="keyword">let</span> isDirty = <span class="literal">true</span>; <span class="comment">// 标志是否为脏</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 每次渲染时，判断是否“脏”了，若是，则重新渲染</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (isDirty) &#123;</div><div class="line">    context.setTransform(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">// 坐标系复位</span></div><div class="line">    context.clearRect(<span class="number">0</span>, <span class="number">0</span>, sharedCanvas.width, sharedCanvas.height); <span class="comment">// 清除 Canvans 画布</span></div><div class="line">    drawElements();  <span class="comment">//绘制排行榜，或者其他元素</span></div><div class="line">    isDirty = <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line">  requestAnimationFrame(render);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="三、UI-同步问题"><a href="#三、UI-同步问题" class="headerlink" title="三、UI 同步问题"></a>三、UI 同步问题</h3><p>微信小游戏有一个十分坑的地方：4M的限制。当我们需要绘制排行榜但又需要让ui 与主域一致的时候就会出现很尴尬的状况：如果将ui代码在开放域和主域都放一份，这会让体积大大增加，如果使用的是游戏框架，同步绘制代码的难度也会增加。</p>
+<p>那么，我们可以怎么解决这个问题呢？</p>
+<p>我的实现思路是，开放域的存在目前也只是获取好友或群共玩好友的关系数据，对于大多数游戏，只在绘制排行榜伤上有用。因此，排行榜可以仅绘制关系数据，即，只绘制头像、排行这一类数据，绘制时对尺寸进行比例缩放，而背景则在主域进行绘制，然后再把排行榜垫在背景上。这种方法仅适用于只绘制不那么复杂的排行榜的需求，对于需要绘制更复杂的界面的功能来说还是鸡肋的，尚未见到或想出一个更好的方法。</p>
+<hr>
+<h3 id="四、客服消息回回复图片功能"><a href="#四、客服消息回回复图片功能" class="headerlink" title="四、客服消息回回复图片功能"></a>四、客服消息回回复图片功能</h3><p>不少的小游戏都有客服功能的需求（emmm，比如回复公众号图片引导关注），但是微信的客服系统是不支持回复图片的，这个时候就需要自己接入客服功能。微信的发送图片信息的body 格式如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  "touser":"OPENID",</div><div class="line">    "msgtype":"image",</div><div class="line">    "image":</div><div class="line">    &#123;</div><div class="line">      "media_id":"MEDIA_ID"</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>具体实现步骤如下：</p>
+<ol>
+<li><p>新增临时素材<br>当我们想向用户发送一张图片时，并不能随心所欲地使用任意图片地址，如上json所示，微信只提供一个mediaid，这个mediaid是我们调用新增临时素材接口提交到微信服务器上之后，返回的一个图片标识，接口如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE</div></pre></td></tr></table></figure>
+<p>参数说明：<br>access_token： 调用接口凭证<br>type：媒体类型，固定填写为 image<br>media：form-data中媒体文件标识，有filename、filelength、content-type等信息</p>
+<p>然后我们需要实现一个可以上传图片的页面，node端接收并发送到微信服务器上，如果成功获取到mediaid之后我们就可以存放在数据库或缓存上对应appid 的地方以便后续发送图片使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> token = wechat.getMiniAccessToken(); <span class="comment">// 自己实现获取当前小程序/小游戏的access token的函数，appid 要对应，否则mediaid是不会回复到用户的</span></div><div class="line"><span class="keyword">const</span> options = &#123;</div><div class="line">  <span class="attr">url</span>: <span class="string">`https://api.weixin.qq.com/cgi-bin/media/upload?access_token=<span class="subst">$&#123;token.access_token&#125;</span>&amp;type=image`</span>,</div><div class="line">  <span class="attr">formData</span>: body.fields,</div><div class="line">&#125;;</div><div class="line"></div><div class="line">request.post(options, (err, res, data) =&gt; &#123;</div><div class="line">  <span class="comment">// 将回传的对象中的mediaid 对应appid存放</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>接收用户发来的消息</p>
+<p>这一步我们需要先配置好服务器，参考<a href="https://developers.weixin.qq.com/miniprogram/dev/api/custommsg/callback_help.html" target="_blank" rel="external">微信服务器接入指引</a>这篇文章，需要注意的是，只有在验证url是否合法的情况下，才会带有echostr 参数，以此我们可以判断当前请求是否为服务器验证，如果带有echostr 参数，我们只需要在确认签名无误之后，把echostr 原样返回就可以了。如果没有echostr参数，则是微信转发过来的用户发来的消息，此时我们就要进入下一步去发送图片了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123;</div><div class="line">  signature, timestamp, nonce, echostr,</div><div class="line">&#125; = <span class="keyword">this</span>.query;</div><div class="line"><span class="keyword">const</span> &#123; body &#125; = <span class="keyword">this</span>.request;</div><div class="line"><span class="keyword">if</span> (echostr) &#123; <span class="comment">// 用于配置客服服务器使用</span></div><div class="line">  <span class="keyword">const</span> result = wechat.checkSign(timestamp, nonce, signature); <span class="comment">// 校验签名是否正确</span></div><div class="line">  <span class="keyword">this</span>.body = result ? echostr : <span class="string">'err signature'</span>; </div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  wechat.sengMsg(body); <span class="comment">// 进入下一步发送图片</span></div><div class="line">  <span class="keyword">this</span>.body = <span class="string">'success'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>向用户发送图片</p>
+<p>上一步中我们接收到微信转发过来的用户消息，具体格式可以参考<a href="https://developers.weixin.qq.com/miniprogram/dev/api/custommsg/receive.html" target="_blank" rel="external">微信客服消息</a> 这篇文章，我们可以获取到发送过来用户，只需要请求微信的接口，就可以把消息推送给该用户了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> mediaId = <span class="string">'需要发送的图片的mediaid'</span>;</div><div class="line"><span class="keyword">let</span> token = wechat.getMiniAccessToken(); <span class="comment">// 当前小程序/小游戏的access token</span></div><div class="line"><span class="keyword">const</span> options = &#123;</div><div class="line">  <span class="attr">url</span>: <span class="string">`https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=<span class="subst">$&#123;token.access_token&#125;</span>`</span>,</div><div class="line">  <span class="attr">body</span>: &#123;</div><div class="line">    <span class="attr">touser</span>: data.FromUserName, <span class="comment">// 需要发送的用户</span></div><div class="line">    msgtype: <span class="string">'image'</span>,</div><div class="line">    <span class="attr">image</span>: &#123;</div><div class="line">      <span class="attr">media_id</span>: mediaId,</div><div class="line">    &#125;,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">json</span>: <span class="literal">true</span>,</div><div class="line">&#125;;</div><div class="line">request.post(options, (err, res, data) =&gt; &#123;</div><div class="line">  <span class="comment">// 发送之后的处理函数</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>笔者对于微信小游戏也只能算是刚入门，以上内容也只是几天开发完之后的一些经验，不算成熟，后续有错误希望指正，互相成长，谢谢。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/07/08/基于Koa-js的微信工具类小记/">
+        基于Koa.js的微信工具类小记 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+
+
+</div>
+    </div>
+</section>
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By EvontNg. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
