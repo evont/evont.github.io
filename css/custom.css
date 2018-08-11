@@ -10,3 +10,9 @@
     display: inline-block;
     margin: 20px
 }
+
+.comment {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
