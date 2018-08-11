@@ -3457,6 +3457,12 @@ footer .footer_bottom {
     display: inline-block;
     margin: 20px
 }
+
+.comment {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
 .entry .gist {
   background: #eee;
   border: 1px solid color-border;
