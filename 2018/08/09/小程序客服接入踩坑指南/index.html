@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>小程序客服接入踩坑指南 | Evolution &amp; Tech</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Evolution & Tech">
+    <meta name="author" content="EvontNg">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Evolution &amp; Tech" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/p2.js/docs/" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
+                    
+                        <li><a href="/resume/2018/" target="_BLANK" class="animsition-link">交互式简历</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Evolution & Tech</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/evont/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-08-09T11:20:00.000Z" itemprop="datePublished">
+          2018-08-09
+      </time>
+    
+</span>
+                <h1>小程序客服接入踩坑指南</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>今年由于开始接触微信小游戏和小程序开发，业务上需要接入小程序客服功能，原先只是要求自动回复固定的内容，在考虑到将来有需要灵活修改及管理多个小程序的多条消息的可能性，于是自己动手设计了一个管理小程序开启自动回复及客服人员自主回复的功能。</p>
+<p>由于Node 在项目里只作为前端开发服务器，本身没有独立的数据库服务，如果将数据放置于内存中，在服务器重启时数据就会丢失，这时候就需要一个不需要开启额外服务、支持Node.js 的数据库，我选取了PouchDB，一个受 CouchDB 启发的 javascript 数据库，性能等各方面都很不错，就是文档很少。</p>
+<p>废话不多说，开始踩坑之路；</p>
+<h3 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h3><p>大致的配置信息可以参考<a href="https://developers.weixin.qq.com/miniprogram/dev/api/custommsg/callback_help.html" target="_blank" rel="external">微信官方接入文档</a>， 这里不再赘述。需要注意的是，由于业务上需要支持多个小程序或小游戏接入客服功能，因为如下图所示的URL（服务器地址）一栏，路由应该设计成支持多应用的。另外，数据格式一项为了更方便处理，推荐使用JSON 格式。</p>
+<p><img src="https://developers.weixin.qq.com/miniprogram/dev/image/callback_help.png?t=18083022" alt="微信消息服务器配置"></p>
+<p>如下代码，微信在服务器配置那一步会发送一个带echostr 参数的GET 请求验证，此时只需要原样返回该参数就可以。而微信转发消息到服务器时走Post请求，不带echostr，此时就进入下一步，解析请求体了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123;</div><div class="line">  echostr,</div><div class="line">&#125; = <span class="keyword">this</span>.query;</div><div class="line"><span class="keyword">const</span> &#123; appid &#125; = <span class="keyword">this</span>.params;</div><div class="line"><span class="keyword">const</span> &#123; body &#125; = <span class="keyword">this</span>.request;</div><div class="line"><span class="keyword">if</span> (echostr) &#123;</div><div class="line">  <span class="keyword">this</span>.body = echostr;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="keyword">yield</span> MiniApp.logCS(appid, body);</div><div class="line">  <span class="keyword">this</span>.body = <span class="string">'success'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="保存消息到数据库中"><a href="#保存消息到数据库中" class="headerlink" title="保存消息到数据库中"></a>保存消息到数据库中</h3><p>从前一步中获取到微信转发过来的数据后，我们需要查找记录中是否有对应的小程序，如果存在时才进行录入，同时，如果是用户进入客服会话而触发的事件则不作处理，数据包格式可参看<a href="https://developers.weixin.qq.com/miniprogram/dev/api/custommsg/receive.html" target="_blank" rel="external">接收消息和事件</a>。如果小程序设置了自动回复，则将设置好的自动回复内容发送给用户</p>
+<p>代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 记录用户反馈信息用于统计和客服自动回复</div><div class="line"> * @param &#123;string&#125; appid 小程序appid，用于查找信息</div><div class="line"> * @param &#123;object&#125; data 微信返回的数据包</div><div class="line"> */</div><div class="line"><span class="keyword">static</span>* logCS(appid, data) &#123;</div><div class="line">  <span class="keyword">const</span> obj = &#123;</div><div class="line">    <span class="attr">_id</span>: <span class="keyword">new</span> <span class="built_in">Date</span>().toISOString(),</div><div class="line">    <span class="attr">csData</span>: data,</div><div class="line">  &#125;;</div><div class="line">  <span class="comment">// 唤起客服会话触发的事情或者数据包为空时不记录</span></div><div class="line">  <span class="keyword">if</span> (data.MsgType !== <span class="string">'event'</span> &amp;&amp; <span class="built_in">Object</span>.keys(data).length) &#123;</div><div class="line">    <span class="comment">// 查询是否有对应appid 的小程序信息</span></div><div class="line">    MiniApp.getMiniAppInfo(&#123; appid &#125;).then(<span class="function">(<span class="params">doc</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">if</span> (doc) &#123;</div><div class="line">        <span class="keyword">const</span> &#123; appId, appName &#125; = doc;</div><div class="line">        obj.appId = appId;</div><div class="line">        obj.appName = appName;</div><div class="line">        <span class="comment">// 将数据包录入到PouchDB 对应的表中</span></div><div class="line">        miniAppCSDB.put(obj).then(<span class="function"><span class="params">response</span> =&gt;</span> (&#123;</div><div class="line">          <span class="attr">status</span>: response.ok ? <span class="number">1</span> : <span class="number">0</span>,</div><div class="line">          <span class="attr">msg</span>: <span class="string">'success'</span>,</div><div class="line">        &#125;))</div><div class="line">        <span class="comment">// 如果该小程序开启了自动回复，则将设置好的自动回复内容发送给用户</span></div><div class="line">        <span class="keyword">if</span> (doc.isAutoReply) &#123;</div><div class="line">          MiniApp.reply(appId, data.FromUserName, <span class="built_in">JSON</span>.parse(doc.replyInfo));</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;).catch(<span class="function"><span class="params">()</span> =&gt;</span> (&#123;</div><div class="line">      <span class="attr">status</span>: <span class="number">0</span>,</div><div class="line">      <span class="attr">msg</span>: <span class="string">'failed'</span>,</div><div class="line">    &#125;));</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="发送消息给用户"><a href="#发送消息给用户" class="headerlink" title="发送消息给用户"></a>发送消息给用户</h3><p>数据库中将存有一个replyInfo 字段，由于微信的回复数据格式多样，所以这个字段我设计成了一个json，便于更改，其格式包含了微信官方所有需要用到的字段，当设置了自动回复时，将同时设置回复内容，而当客服人员使用平台发送消息时，也将对应字段设置完传入以下函数进行回复； </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 回复用户信息</div><div class="line"> * @param &#123;string&#125; appId 小程序id</div><div class="line"> * @param &#123;string&#125; FromUserName 需要回复的用户名</div><div class="line"> * @param &#123;object&#125; replyInfo 回复类型信息，用于判断回复哪种信息给用户</div><div class="line"> */</div><div class="line"><span class="keyword">static</span> reply(appId, FromUserName, replyInfo) &#123;</div><div class="line">  MiniApp.getMiniAccessToken(&#123; appId &#125;).then(<span class="function">(<span class="params">token</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> options = &#123;</div><div class="line">      <span class="attr">url</span>: <span class="string">`https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=<span class="subst">$&#123;token&#125;</span>`</span>,</div><div class="line">      <span class="attr">body</span>: &#123;</div><div class="line">        <span class="attr">touser</span>: FromUserName,</div><div class="line">      &#125;,</div><div class="line">      <span class="attr">json</span>: <span class="literal">true</span>,</div><div class="line">    &#125;;</div><div class="line">    options.body.msgtype = replyInfo.MsgType;</div><div class="line">    <span class="comment">// 文本</span></div><div class="line">    <span class="keyword">if</span> (replyInfo.MsgType === <span class="string">'text'</span>) &#123;</div><div class="line">      options.body.text = &#123;</div><div class="line">        <span class="attr">content</span>: replyInfo.content,</div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 图片</span></div><div class="line">    <span class="keyword">if</span> (replyInfo.MsgType === <span class="string">'image'</span>) &#123;</div><div class="line">      options.body.image = &#123;</div><div class="line">        <span class="attr">media_id</span>: replyInfo.media_id,</div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 图文链接</span></div><div class="line">    <span class="keyword">if</span> (replyInfo.MsgType === <span class="string">'link'</span>) &#123;</div><div class="line">      options.body.link = &#123;</div><div class="line">        <span class="attr">title</span>: replyInfo.title,</div><div class="line">        <span class="attr">description</span>: replyInfo.description,</div><div class="line">        <span class="attr">url</span>: replyInfo.url,</div><div class="line">        <span class="attr">thumb_url</span>: replyInfo.thumb_url,</div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 小程序卡片</span></div><div class="line">    <span class="keyword">if</span> (replyInfo.MsgType === <span class="string">'miniprogrampage'</span>) &#123;</div><div class="line">      options.body.miniprogrampage = &#123;</div><div class="line">        <span class="attr">title</span>: replyInfo.title,</div><div class="line">        <span class="attr">pagepath</span>: replyInfo.pagepath,</div><div class="line">        <span class="attr">thumb_media_id</span>: replyInfo.thumb_media_id,</div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line">    request.post(options, (err, httpResponse, body) =&gt; &#123;</div><div class="line">      <span class="keyword">if</span> (err) &#123;</div><div class="line">        <span class="comment">// handle err</span></div><div class="line">      &#125;</div><div class="line">    &#125;);</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/10/30/taro-minicloud/" style="float: left;">
+        ← Taro + 小程序云开发实战
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/07/22/微信小游戏开发小记/">
+        微信小游戏开发小记 →
+    </a>
+    
+</nav>
+
+        <div class="comment">
+<div id="container"></div>
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '小程序客服接入踩坑指南',
+  owner: 'evont',              //比如我的叫anTtutu
+  repo: 'BlogComment',                 //比如我的叫anTtutu.github.io
+  oauth: {
+    client_id: '7e2149d73a884a8cb412',
+    client_secret: 'fbe4d52b960e04e0499cceae7d8389318c22a558', 
+  },
+})
+gitment.render('container')
+</script></div>
+    </div>
+</section>
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By EvontNg. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/evont/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
