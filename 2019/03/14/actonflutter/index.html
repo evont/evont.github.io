@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>一个前端码农的 Flutter 实战经验 | Evolution &amp; Tech</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Evolution & Tech">
+    <meta name="author" content="EvontNg">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Evolution &amp; Tech" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/p2.js/docs/" target="_BLANK" class="animsition-link">p2 中文文档</a></li>
+                    
+                        <li><a href="/resume/2018/" target="_BLANK" class="animsition-link">交互式简历</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Evolution & Tech</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/evont/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-03-14T13:44:18.636Z" itemprop="datePublished">
+          2019-03-14
+      </time>
+    
+</span>
+                <h1>一个前端码农的 Flutter 实战经验</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当年React Native 正火的时候，我撸了一个<a href="https://github.com/evont/YixiReactNative" target="_blank" rel="external">一席</a>的客户端，最近抽空把我自己的项目用Flutter 写一下，项目地址<a href="https://github.com/evont/nowapp-flutter" target="_blank" rel="external">戳这里</a>，走过路过随手给个star🌟，不胜感激；<br>以下是作为前端对Flutter 的一些看法和经验的总结；</p>
+<hr>
+<h2 id="Dart"><a href="#Dart" class="headerlink" title="Dart"></a>Dart</h2><p>我在上手写Flutter 的时候，其实一开始并没有学习Dart，觉得有点类似TypeScript，Dart 很好上手，只在遇到一些不熟悉的问题时才去翻阅<a href="https://user-gold-cdn.xitu.io/2019/3/13/169766ceb805975e" target="_blank" rel="external">Dart文档</a>，说一下一些不一样的概念：</p>
+<ul>
+<li><p>变量声明</p>
+<ol>
+<li><p>var</p>
+<p>在JavaScript 和Dart 中，它都可以接受任意类型，但Dart中var的变量一旦赋值，类型便会确定，则不能再改变其类型；</p>
+   <figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a;</div><div class="line">a = <span class="string">'hello'</span>; <span class="comment">// a 已经确定为String类型</span></div><div class="line">a = <span class="number">1</span>; <span class="comment">// 报错，类型不能更改</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>dynamic &amp; Object</p>
+<p>javaScript中没有dynamic 变量声明，与var 不同，这两个都支持声明后改变变量类型，但Object 声明的变量只能使用Object所拥有的属性和方法，而dynamic 则支持所有属性</p>
+</li>
+<li><p>final &amp; const</p>
+<p>从字面上可以看出这两个都是声明常量，但是const 变量是编译时常量，而final 变量则在第一次使用时初始化；</p>
+</li>
+</ol>
+</li>
+<li><p>异步支持</p>
+<p>在Javascript 和Dart中都有相同用法的async、await，但没有Promise，取而代之的是Future，但没有resolve 和reject</p>
+</li>
+<li><p>构造函数<br>在Dart 中，子类不会继承父类的命名构造函数。如果不显式提供子类的构造函数，系统就提供默认的构造函数。同时，写法也变得更简洁；</p>
+  <figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</div><div class="line">  <span class="built_in">num</span> x;</div><div class="line">  <span class="built_in">num</span> y;</div><div class="line">    </div><div class="line">  Point(<span class="keyword">this</span>.x, <span class="keyword">this</span>.y);<span class="comment">// 这句等同于</span></div><div class="line">  <span class="comment">/* </span></div><div class="line">  Point(num x, num y) &#123;</div><div class="line">    this.x = x;</div><div class="line">    this.y = y;</div><div class="line">  &#125;</div><div class="line">  */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数</p>
+<p>在Javascript 中，箭头函数是作为一个影响this 作用域等的存在，但在Dart 中则是作为缩写语法的存在，两者的概念是不同的，应该区分清楚；</p>
+</li>
+</ul>
+<hr>
+<h2 id="UI-布局"><a href="#UI-布局" class="headerlink" title="UI 布局"></a>UI 布局</h2><p>首先我们来看看同样的布局，使用HTML + CSS 和Flutter 的写法区别<br><img src="https://user-gold-cdn.xitu.io/2019/3/13/169769a033eec62d?w=1568&amp;h=656&amp;f=png&amp;s=128819" alt=""></p>
+<p>在Flutter 中，一切UI 都基于Widget，在上图中，Container 便是一个Widget，靠style 来设置样式（也可以使用Theme，后文中细讲），子类嵌套在child 中，。<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</div><div class="line">  <span class="meta">@override</span></div><div class="line">  Widget build(BuildContext context) &#123;</div><div class="line">    <span class="keyword">return</span> MaterialApp(</div><div class="line">      home: HomePage(),</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>实际上这种写法有点类似虚拟Dom，以树形嵌套来编写，但是这种写法个人觉得维护起来很要命，如果没有足够细分组件的话，可读性也会变得很差，实际上，Flutter 的issues 中也有关于<a href="https://github.com/flutter/flutter/issues/11609" target="_blank" rel="external">类JSX 写法的讨论</a>，对这种写法的吐槽，最近在掘金沸点上看到一张很贴切的图：<br><img src="https://user-gold-cdn.xitu.io/2019/3/13/16975d5e836c348b?w=407&amp;h=400&amp;f=png&amp;s=13762" alt=""></p>
+<p>关于Widget 可以参考<a href="https://flutterchina.club/widgets/" target="_blank" rel="external">Flutter 中文网的Widget 目录</a>，具体的我就不展开写了，下面讲讲一些不常见的需要注意的问题：</p>
+<ol>
+<li><code>Expanded</code> 不能用在不确定或者无限高度Widget(如<code>SingleChildScrollView</code>) 中</li>
+<li><p><code>BuildContext</code> 的概念</p>
+<p> <code>BuildContext</code> 实际上是当前Widget 所创建的Element对象，在获取组件尺寸，就需要用到<code>MediaQuery.of(context).size</code> ，路由跳转时，也要用到<code>Navigator.of(context)</code>，比较详细的展开和理解说明可以参考<a href="https://juejin.im/post/5c665cb651882562914ec153" target="_blank" rel="external">深入理解BuildContext</a> 这篇文章；</p>
+</li>
+<li><p>Widget 的状态管理</p>
+<p>这里要介绍一下<code>InheritedWidget</code>，<code>InheritedWidget</code>是一个特殊的Widget，你可以将其作为另一个子树的父级放在Widgets树中。该子树的所有子Widget 都能与该<code>InheritedWidget</code> 公开的数据进行交互，从而实现了Widget 间的通信；更多状态管理的方式可以参考 <a href="https://juejin.im/post/5c52ce3b51882525331617d1" target="_blank" rel="external">深入探索 flutter 中的状态管理方式</a></p>
+</li>
+</ol>
+<h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><p>在Flutter 中，样式并没有抽离出来，而是以各种（混乱甚至有点怪异）组合的方式来使用，设置文本要用<code>TextStyle</code>，设置边框背景等要用<code>decoration</code>，感兴趣的可以看看<a href="https://juejin.im/post/5c41af466fb9a04a0e2d7d51#heading-13" target="_blank" rel="external">样式的一些用法对比</a>；</p>
+<p>这里要吐槽一下样式的管理，在Flutter 中，可以使用<code>Theme</code>来共享样式，但是单个Widget 的样式除了<code>DefaultTextStyle</code>设置默认文本样式外没得继承，还是要自己一个个写，这里就推动了对组件进行细化（不然懒得重复写），主题有以下使用方式</p>
+<ul>
+<li><p>全局主题</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> MaterialApp(</div><div class="line">  title: title,</div><div class="line">  theme: <span class="keyword">new</span> ThemeData(</div><div class="line">      brightness: Brightness.dark,</div><div class="line">  ),</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部主题</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Theme(</div><div class="line">  data: <span class="keyword">new</span> ThemeData(</div><div class="line">      accentColor: Colors.yellow,</div><div class="line">  ),</div><div class="line">  child: <span class="keyword">new</span> Text(<span class="string">'Hello World'</span>),</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+<li><p>拓展主题</p>
+<p>如果你不想覆盖所有的样式，可以继承App的主题，只覆盖部分样式，使用copyWith方法。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Theme(</div><div class="line">  data: Theme.of(context).copyWith(accentColor: Colors.yellow),</div><div class="line">  child: <span class="keyword">new</span> Text(<span class="string">'extend theme'</span>),</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取主题</p>
+<p><code>Theme.of(context)</code> 会查找Widget 树，并返回最近的一个Theme对象。如果父层级上有Theme对象，则返回这个Theme，如果没有，就返回App的Theme。创建好主题，只要在Widget的构造方法里面通过Theme.of(context) 方法来调用。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Container(</div><div class="line">  color: Theme.of(context).accentColor,</div><div class="line">  chile: <span class="keyword">new</span> Text(</div><div class="line">      <span class="string">'Text with a background color'</span>,</div><div class="line">      style: Theme.of(context).textTheme.title,</div><div class="line">  ),</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h2 id="状态组件"><a href="#状态组件" class="headerlink" title="状态组件"></a>状态组件</h2><h3 id="Stateful-与StateLess"><a href="#Stateful-与StateLess" class="headerlink" title="Stateful 与StateLess"></a>Stateful 与StateLess</h3><p>用过React 的都知道无状态组件和有状态组件，在Flutter中，<code>StatelessWidget</code> 便是无状态组件，它不依赖于除了传入的数据以外任何其他数据，意味着改变传入其构造函数的参数是改变其显示的唯一方式。而<code>StatefulWidget</code> 则是有状态组件，但是跟React有一点不同，在React 中，组件的<code>render</code>和state 是在一起的，而Flutter 中，<code>StatefulWidget</code> 需要重写<code>createStae()</code>，返回一个State，而<code>build</code> 方法需要放在State 中，至于为什么不放在StatefulWidget 呢？有两点原因：</p>
+<ol>
+<li><p>状态访问问题</p>
+<p>由于<code>build</code> 方法在state 每次改变时都会调用，在<code>StatefulWidget</code>有很多状态时，<code>build</code> 方法需要传入一个State 参数，那么，只能将State的所有状态公开才能在State类外部访问，但公开状态后，状态将不再具有私密性，这样对状态的修改将变得不可控；</p>
+ <figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Widget build(BuildContext context, State state)&#123;</div><div class="line">  <span class="comment">//state.a etc...</span></div><div class="line">  ...</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>继承StatefulWidget问题</p>
+<p>当第一个情况发生后，如果有个子Widget 继承自一个引入了抽象方法<code>build(BuildContext context)</code>的父Widget，那么子Widget 在实现这个<code>build</code> 时都需要传入一个state，此时父Widget 就必须将自己的state 传入给子Widget，这样就十分不合理，因为父Widget 的state 只与自身逻辑有关，且传递给子Widget 还需另外的传递机制，因此，应该将<code>build</code> 方法放在State 中。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildWidgert</span> <span class="keyword">extends</span> <span class="title">ParentWidget</span></span>&#123;</div><div class="line">   <span class="meta">@override</span></div><div class="line">   Widget build(BuildContext context, State state)&#123;</div><div class="line">    <span class="keyword">super</span>.build(context, _parentWidgetState)</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>Flutter 的生命周期如下图：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/3/13/1697798bc1b6e0b6?w=856&amp;h=673&amp;f=png&amp;s=120738" alt=""><br>说一些常用的：</p>
+<ol>
+<li><p>initState</p>
+<p>这个函数相当于在React 中的构造函数中初始化State，可以在这一步进行数据请求加载</p>
+</li>
+<li><p>didUpdateWidget</p>
+<p>当调用了 <code>setState</code> 改变Widget 状态时，Flutter 会创建一个新的 Widget 来绑定这个 State 并在此方法中传递旧 Widget ，如果你想比对新旧 Widget 并且对 State 做一些调整，或者某些 Widget 上涉及到 controller 的变更时，就可以在此回调方法中移除旧的 controller 并创建新的 controller；</p>
+ <figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@override</span></div><div class="line"><span class="keyword">void</span> didUpdateWidget(AVCycleLess oldWidget)&#123;</div><div class="line">  <span class="keyword">super</span>.didUpdateWidget(oldWidget);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>dispose</p>
+<p>当Widget 被释放（如路由切换），Widget 中存在一些监听或持久化的变量，你就需要在 dispose 中进行释放。</p>
+</li>
+</ol>
+<h3 id="FutureBuilder"><a href="#FutureBuilder" class="headerlink" title="FutureBuilder"></a>FutureBuilder</h3><p>当我们进入页面进行一些耗时的操作，比如请求数据、初始化某些设置等时，我们通常需要显示一个加载页面，一般做法都是判断数据状态来切换显示的组件，而在Flutter 中则有<code>FutureBuilder</code> 这种便利的解决方案，这里展开篇幅会很长，可以参考<a href="https://blog.csdn.net/u011272795/article/details/83010974" target="_blank" rel="external">FutureBuilder的使用方法和注意事项</a></p>
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>在Flutter 中，路由分为静态路由和动态路由，静态路由无法传递参数，所以在需要传递参数的情况下只能使用动态路由；</p>
+<h3 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a>静态路由</h3><p>静态路由在新建App 时定义，使用<code>Navigator.of(context).pushNamed(&#39;/router/a&#39;);</code>进行切换，pushNamed 返回一个Future，可以接收来自下一个页面的返回值。<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span> <span class="keyword">new</span> MaterialApp(</div><div class="line">    home: <span class="keyword">new</span> Text(<span class="string">'hello'</span>),</div><div class="line">    routes: &lt;<span class="built_in">String</span>, WidgetBuilder&gt; &#123;</div><div class="line">        <span class="string">'/router/a'</span>: (_) =&gt; <span class="keyword">new</span> APage(),</div><div class="line">        <span class="string">'/router/b'</span>: (_) =&gt; <span class="keyword">new</span> BPage(),</div><div class="line">    &#125;,</div><div class="line">);</div><div class="line"><span class="comment">// then 说明</span></div><div class="line"><span class="comment">// 当前页面</span></div><div class="line">Navigator.of(context).pushNamed(<span class="string">'/router/b'</span>).then((value) &#123;</div><div class="line">    <span class="comment">// value 为下一个页面的返回值</span></div><div class="line">&#125;)；</div><div class="line"><span class="comment">// b 页面</span></div><div class="line">Navigator.of(context).pop(<span class="string">'some data'</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><p>动态路由使用<code>push</code>方法，传入一个route 对象，在builder 中创建一个新页面对象，如果需要自定义动画效果，只需要使用<code>PageRouteBuilder</code> 替换<code>MaterialPageRoute</code> ，在<code>transitionsBuilder</code> 中定义动画即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Navigator.of(context).push(new MaterialPageRoute(builder: (_) &#123;</div><div class="line">    return new NewPage(data: &apos;some data&apos;);</div><div class="line">&#125;));</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h2><h3 id="Dio"><a href="#Dio" class="headerlink" title="Dio"></a>Dio</h3><p>在Flutter 中，网络请求是由<code>HttpClient</code> 进行的，但其操作十分麻烦，所以有<a href="https://github.com/flutterchina/dio" target="_blank" rel="external">Dio</a> 这么一个优秀的请求库来简化我们的工作，需要注意的是，当App 只有一个数据源时，Dio 应该使用单例模式</p>
+<h3 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h3><p>当我们获取到数据时，通常我们都会拿到一个json，在JavaScript 中，我们可以很任意地直接使用点操作符来获取数据中的字段，但是在Dart中，你需要引入<code>dart:convert</code>，并使用<code>JSON.decode(json)</code>，但它返回的是一个<code>Map&lt;String, dynamic&gt;</code>，意味着我们直到运行时才知道值的类型，也就失去了大部分静态类型语言特性：类型安全、自动补全和最重要的编译时异常。</p>
+<p>但这样一来，我们的代码可能会变得非常容易出错。我们通常需要编写模型类来序列化JSON，官方推荐了<code>json_serializable</code>（相关操作看<a href="https://flutterchina.club/json/" target="_blank" rel="external">这里</a>） 来辅助我们生成库序列化JSON，通过这种方式，我们就可以直接用点操作符来操作数据了。</p>
+<p>如果还是嫌麻烦，可以试试<a href="https://github.com/debuggerx01/JSONFormat4Flutter" target="_blank" rel="external">JSONFormat4Flutter</a>这一工具（我还没用过，看着很不错的样子。）</p>
+<hr>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>在Vue 中，我们只需要使用<code>@click</code> 之类的方法即可监听事件，而React 中则是<code>onClick</code>之类的方法，但在Flutter 中，我们需要将需要监听事件的元素包裹在<code>GestureDetector</code> 中，使用<code>onTap</code> 等方法来处理事件，对事件的行为表现，我们可以通过设置<code>behavior</code>来控制，<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">enum</span> HitTestBehavior &#123;</div><div class="line">  deferToChild, <span class="comment">// 子widget会一个接一个的进行命中测试，如果子Widget中有测试通过的，则当前Widget通过，这就意味着，如果指针事件作用于子Widget上时，其父(祖先)Widget也肯定可以收到该事件。</span></div><div class="line">  opaque,<span class="comment">// 在命中测试时，将当前Widget当成不透明处理(即使本身是透明的)，最终的效果相当于当前Widget的整个区域都是点击区域</span></div><div class="line">  translucent,<span class="comment">// 当点击Widget透明区域时，可以对自身边界内及底部可视区域都进行命中测试，这意味着点击顶部widget透明区域时，顶部widget和底部widget都可以接收到事件</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><p>在Flutter 中，如果需要使用Canvas，我们需要继承CustomPainter 并重写paint方法来绘制自定义图形。在使用Canvas时，我们需要知道三个概念：</p>
+<ul>
+<li><p>canvas</p>
+<p>画布对象，包括了各种绘制方法，用来绘制各种图形</p>
+</li>
+<li><p>size</p>
+<p>当前绘制区域的大小</p>
+</li>
+<li><p>paint</p>
+<p>画笔，用来控制画出来的各种属性，如颜色、描边及抗锯齿等；</p>
+</li>
+</ul>
+<p>使用例子如下：<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyPainter</span> <span class="keyword">extends</span> <span class="title">CustomPainter</span> </span>&#123;</div><div class="line">  <span class="meta">@override</span></div><div class="line">  <span class="keyword">void</span> paint(Canvas canvas, Size size) &#123;</div><div class="line">      canvas.drawRect(Offset.zero &amp; size, Paint()</div><div class="line">      ..isAntiAlias = <span class="keyword">true</span> <span class="comment">// 抗锯齿</span></div><div class="line">      ..style = PaintingStyle.fill <span class="comment">// 填充，stroke则为使用描边</span></div><div class="line">      ..color = Color(<span class="number">0xFF000000</span>) <span class="comment">// yanse</span></div><div class="line">      );</div><div class="line">  &#125;</div><div class="line">  <span class="meta">@override</span></div><div class="line">  <span class="built_in">bool</span> shouldRepaint(CustomPainter oldDelegate) =&gt; <span class="keyword">false</span>; <span class="comment">// 强制不重绘，提高性能</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="复用"><a href="#复用" class="headerlink" title="复用"></a>复用</h2><h3 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h3><p>说到mixin ，相信Vue 和React 的使用者都很熟悉，虽然React中mixin已 被高阶函数或Decorator取代，但在Flutter 中，mixin 还是得以保留。<br>它使用<code>with</code> 来引入一个mixin，定义的方式如下：<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</div><div class="line">  <span class="built_in">int</span> a = <span class="number">1</span>;</div><div class="line">  <span class="keyword">void</span> b()&#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">'c'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="title">with</span> <span class="title">A</span></span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">B b = <span class="keyword">new</span> B();</div><div class="line"><span class="built_in">print</span>(b.a);</div><div class="line">b.b();</div></pre></td></tr></table></figure></p>
+<p>不过，mixin 在 Dart 中是有以下使用条件的：</p>
+<ul>
+<li>mixins类只能继承自object</li>
+<li>mixins类不能有构造函数</li>
+<li>一个类可以mixins多个mixins类</li>
+<li>可以mixins多个类，不破坏Flutter的单继承</li>
+</ul>
+<hr>
+<h2 id="Keep-alive"><a href="#Keep-alive" class="headerlink" title="Keep-alive"></a>Keep-alive</h2><p>在使用Tab 时，切换Tab后，每个Tab 都会被销毁然后重建，于是会多次调用initState，那有没有类似Vue 中的<code>&lt;keep-alive&gt;</code> 组件一样的存在呢？答案是有的，那就是<code>AutomaticKeepAliveClientMixin</code>。只需要继承这个mixin并实现<code>wantKeepAlive</code> 方法即可。但widget在不显示之后也不会被销毁仍然保存在内存中，所以慎重使用这个方法<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">APageState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">APage</span>&gt; <span class="title">with</span> <span class="title">AutomaticKeepAliveClientMixin</span> </span>&#123;</div><div class="line">  <span class="meta">@override</span></div><div class="line">  <span class="built_in">bool</span> <span class="keyword">get</span> wantKeepAlive =&gt; <span class="keyword">true</span>;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>以上只是我这10天断断续续做出第一个粗糙的Flutter App所学到的东西，有些是查资料过程中看到的一些知识点，并没有用在项目中，还有很多细致的或者没遇到过的东西值得探讨，等以后遇到了有机会再讲讲。</p>
+<hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://docs.flutter.io/index.html" target="_blank" rel="external">Flutter 官网</a>（强烈建议以官方文档为准，比较方便查询）</li>
+<li><a href="https://book.flutterchina.club/" target="_blank" rel="external">Flutter实战</a> （十分推荐）</li>
+<li><a href="https://flutterchina.club/" target="_blank" rel="external">Flutter 中文网</a></li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/02/21/koa-next/">
+        谈谈Koa 中的next →
+    </a>
+    
+</nav>
+
+        <div class="comment">
+<div id="container"></div>
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '一个前端码农的 Flutter 实战经验',
+  owner: 'evont',              //比如我的叫anTtutu
+  repo: 'BlogComment',                 //比如我的叫anTtutu.github.io
+  oauth: {
+    client_id: '7e2149d73a884a8cb412',
+    client_secret: 'fbe4d52b960e04e0499cceae7d8389318c22a558', 
+  },
+})
+gitment.render('container')
+</script></div>
+    </div>
+</section>
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By EvontNg. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/evont/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
